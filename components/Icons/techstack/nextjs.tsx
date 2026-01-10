@@ -4,20 +4,41 @@ import React from "react";
 const NextJS = ({ className }: { className?: string }) => {
   return (
     <svg
-      className={cn("size-5", className)}
-      viewBox="0 0 24 24"
-      fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 180 180"
+      className={cn("inline-block size-5", className)}
     >
-      <circle cx="12" cy="12" r="10" fill="black"/>
+      <circle cx="90" cy="90" r="90" />
+      <circle cx="90" cy="90" r="90" />
+      <linearGradient
+        id="a"
+        x1="93.23"
+        x2="128.73"
+        y1="52.776"
+        y2="8.776"
+        gradientTransform="matrix(1 0 0 -1 0 182)"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop offset="0" stopColor="#fff" />
+        <stop offset="1" stopColor="#fff" stopOpacity="0" />
+      </linearGradient>
       <path
-        d="M9 17.5V7L16 17.5"
-        stroke="white"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
+        d="M149.5 157.5 69.1 54H54v72h12.1V69.4l73.9 95.5c3.3-2.3 6.5-4.7 9.5-7.4"
+        fill="white"
       />
-      <line x1="17" y1="7" x2="17" y2="17" stroke="white" strokeWidth="1.5" strokeLinecap="round"/>
+      <linearGradient
+        id="b"
+        x1="121.14"
+        x2="120.94"
+        y1="128.02"
+        y2="75.147"
+        gradientTransform="matrix(1 0 0 -1 0 182)"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop offset="0" stopColor="#fff" />
+        <stop offset="1" stopColor="#fff" stopOpacity="0" />
+      </linearGradient>
+      <path fill="url(#b)" d="M115 54h12v72h-12z" />
     </svg>
   );
 };

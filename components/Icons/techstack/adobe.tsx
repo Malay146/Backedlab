@@ -8,9 +8,9 @@ const Adobe = ({ className }: { className?: string }) => {
     >
       <path
         fill="#EB1000"
-        fill-rule="evenodd"
+        fillRule="evenodd"
         d="M0 5h37.123L0 95.411zm62.413 0H100v89.25zm-12.22 34.57L70.69 93.788H58.005l-8.74-17.169h-13.92z"
-        clip-rule="evenodd"
+        clipRule="evenodd"
       />
     </svg>
   );

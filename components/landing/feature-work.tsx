@@ -21,7 +21,7 @@ const FeatureWork = () => {
             <div key={index} className="relative">
               <div className="w-200 h-120 border border-zinc-300 rounded-2xl relative overflow-hidden mx-4">
                 <Image
-                  src="/image.png"
+                  src="/work.png"
                   alt="Feature Work Image"
                   layout="fill"
                   objectFit="cover"

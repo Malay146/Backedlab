@@ -11,10 +11,10 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const links = [
-    { name: "Home", href: "/" },
-    { name: "About", href: "#" },
-    { name: "Services", href: "#" },
-    { name: "Contact", href: "#" },
+    { name: "Home", href: "#hero" },
+    { name: "Features", href: "#features" },
+    { name: "Services", href: "#services" },
+    { name: "FAQ", href: "#faq" },
   ];
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
@@ -35,12 +35,12 @@ const Navbar = () => {
           <div className="hidden lg:flex items-center gap-4">
             {links.map((link) => (
               <TextAnimation key={link.name}>
-                <Link
+                <a
                   href={link.href}
                   className="font-sans text-black font-medium leading-none px-2 py-1 transition-colors"
                 >
                   {link.name}
-                </Link>
+                </a>
               </TextAnimation>
             ))}
             <TextAnimation className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-full transition cursor-pointer leading-none">

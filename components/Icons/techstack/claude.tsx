@@ -4,18 +4,20 @@ import React from "react";
 const Claude = ({ className }: { className?: string }) => {
   return (
     <svg
-      className={cn("size-5", className)}
-      viewBox="0 0 24 24"
-      fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      fillRule="evenodd"
+      clipRule="evenodd"
+      imageRendering="optimizeQuality"
+      shapeRendering="geometricPrecision"
+      textRendering="geometricPrecision"
+      viewBox="0 0 512 512"
+      className="inline-block size-5"
     >
-      <rect width="24" height="24" rx="4" fill="#CC9B7A"/>
+      <rect width="512" height="512" fill="#CC9B7A" rx="104.187" ry="105.042" />
       <path
-        d="M7.5 16.5L9 13.5L10.5 16.5M9 13.5L10.5 10.5L12 13.5M10.5 10.5L12 7.5L13.5 10.5M12 13.5L13.5 16.5L15 13.5M13.5 10.5L15 13.5M15 7.5L16.5 10.5L15 13.5"
-        stroke="white"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
+        fill="#f0f0f0"
+        fillRule="nonzero"
+        d="M318.663 149.787h-43.368l78.952 212.423 43.368.004zm-125.326 0-78.952 212.427h44.255l15.932-44.608 82.846-.004 16.107 44.612h44.255l-79.126-212.427zm-4.251 128.341 26.91-74.701 27.083 74.701z"
       />
     </svg>
   );

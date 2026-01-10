@@ -3,21 +3,12 @@ import React from "react";
 
 const Framer = ({ className }: { className?: string }) => {
   return (
-    <svg
-      className={cn("size-5", className)}
-      viewBox="0 0 24 24"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100"
+    className={cn("inline-block size-5", className)}
     >
       <path
-        d="M12 3H21V12H12M3 12H12L3 21V12Z"
-        fill="#0055FF"
-      />
-      <path
-        d="M3 12H12V21"
-        stroke="#0055FF"
-        strokeWidth="1.5"
-        strokeLinejoin="round"
+        fill="#000"
+        d="M80.822 64.821c1.05 1.05.306 2.845-1.178 2.845H52c-.922 0-1.667.744-1.667 1.666v27.645c0 1.483-1.794 2.228-2.844 1.178L17.65 68.315a2.22 2.22 0 0 1-.65-1.571V35.999c0-.922.744-1.666 1.667-1.666h31.666zM50.333 34.333 19.844 3.843C18.794 2.794 19.54 1 21.022 1H82c.922 0 1.667.745 1.667 1.667v30c0 .922-.745 1.667-1.667 1.667z"
       />
     </svg>
   );
