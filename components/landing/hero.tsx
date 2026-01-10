@@ -16,12 +16,12 @@ const Hero = () => {
         transition={{ duration: 0.6 }}
         className="flex flex-col gap-4 md:gap-6"
       >
-        <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight tracking-tight">
+        <div className="font-sans text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight tracking-tight">
           <motion.p
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-[10px] text-zinc-700 font-semibold tracking-normal leading-none px-2 py-1.5 bg-zinc-100 inline-block rounded-md shadow-[inset_1px_1px_2px_rgba(0,0,0,0.1),inset_-1px_-1px_2px_rgba(0,0,0,0.3)] mb-4"
+            className="font-mono text-[10px] text-zinc-700 font-semibold tracking-normal leading-none px-2 py-1.5 bg-zinc-100 inline-block rounded-md shadow-[inset_1px_1px_2px_rgba(0,0,0,0.1),inset_-1px_-1px_2px_rgba(0,0,0,0.3)] mb-4"
           >
             {" "}
             <span className="inline-block size-2 rounded-full bg-blue-700 mr-1 animate-pulse" />
@@ -47,7 +47,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.5 }}
-          className="max-w-lg text-zinc-700 text-base md:text-lg leading-relaxed"
+          className="font-sans max-w-lg text-zinc-700 text-base md:text-lg leading-relaxed"
         >
           We're a design and development studio crafting minimal,
           high-performance websites and products for modern brands.
@@ -59,12 +59,12 @@ const Hero = () => {
           transition={{ duration: 0.5, delay: 0.6 }}
           className="flex flex-row items-stretch sm:items-center gap-4"
         >
-          <TextAnimation className="flex gap-3 justify-center items-center font-medium bg-blue-600 px-4 py-3 text-white rounded-full cursor-pointer text-sm md:text-base">
+          <TextAnimation className="flex gap-3 justify-center items-center font-sans font-medium bg-blue-600 px-4 py-3 text-white rounded-full cursor-pointer text-sm md:text-base">
             <button className="inline-block">Start a Project</button>
             <ArrowRight className="size-4 md:size-5 inline-block ml-2" />{" "}
           </TextAnimation>
 
-          <TextAnimation className="border border-zinc-700 px-4 py-3 text-black rounded-full cursor-pointer text-sm md:text-base ">
+          <TextAnimation className="font-sans border border-zinc-700 px-4 py-3 text-black rounded-full cursor-pointer text-sm md:text-base ">
             <button className="flex justify-center items-center font-medium md:-mb-1.5">
               See Our Work
             </button>

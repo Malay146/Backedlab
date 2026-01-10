@@ -30,13 +30,13 @@ const Stats = () => {
     ];  
 
   return (
-    <div className="w-full flex flex-col items-center justify-center py-12 mt-10 bg-zinc-100">
+    <div className="w-full flex flex-col items-center justify-center py-12 mt-10 border-b border-zinc-300">
       <motion.h1
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.5, ease: "easeOut" }}
-        className="text-6xl tracking-tight"
+        className="font-sans text-6xl tracking-tight"
       >
         By the numbers
       </motion.h1>
@@ -45,7 +45,7 @@ const Stats = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
-        className="max-w-6xl w-full border border-zinc-300 flex flex-col md:flex-row mt-8 bg-[#fafafa]"
+        className="max-w-6xl w-full border border-zinc-300 flex flex-col md:flex-row mt-8 bg-white"
       >
         {stats.map((stat, i) => (
           <motion.div
@@ -63,8 +63,8 @@ const Stats = () => {
             }`}
           >
             <AnimatedNumber value={stat.value} delay={0.4 + i * 0.1} />
-            <p className="text-lg font-medium">{stat.title}</p>
-            <p className="text-sm text-zinc-500">{stat.meta}</p>
+            <p className="font-sans text-lg font-medium">{stat.title}</p>
+            <p className="font-sans text-sm text-zinc-500">{stat.meta}</p>
           </motion.div>
         ))}
       </motion.div>

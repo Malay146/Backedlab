@@ -29,8 +29,8 @@ const MarqueeCompany = () => {
   ];
 
   return (
-    <div className="flex flex-col items-center mt-16 md:mt-24 lg:mt-32 w-full overflow-hidden px-4 sm:px-6 lg:px-8">
-      <h2 className="mb-4 md:mb-6 text-sm md:text-md text-zinc-500 tracking-wider font-semibold text-center">
+    <div className="flex flex-col items-center mt-16 w-full overflow-hidden px-4 sm:px-6 lg:px-8">
+      <h2 className="font-mono mb-4 md:mb-6 text-sm md:text-md text-zinc-500 tracking-wider font-semibold text-center">
         Trusted by Companies Worldwide
       </h2>
 
@@ -40,7 +40,6 @@ const MarqueeCompany = () => {
           gradient={true}
           gradientColor="#FAFAFA"
           speed={50}
-          pauseOnHover
           autoFill
           className="flex items-center"
           style={{ overflow: "hidden" }}

@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const Bento = () => {
   return (
-    <div className="w-full py-20">
+    <div className="w-full py-20 bg-zinc-100  border-y border-zinc-200">
       <div className="max-w-300 min-h-200 grid grid-cols-5 mx-auto border border-zinc-300">
 
         {/* Card 1 — Design */}
@@ -18,13 +18,13 @@ const Bento = () => {
           <div className="absolute inset-0 bg-linear-to-t from-white via-white/70 to-transparent" />
 
           <div className="relative h-full flex flex-col justify-end p-8 gap-2">
-            <span className="font-geist-mono text-xs uppercase tracking-wider text-zinc-500">
+            <span className="font-mono text-xs uppercase tracking-wider text-zinc-500">
               Design
             </span>
-            <h2 className="font-geist text-3xl font-semibold text-zinc-900">
+            <h2 className="font-sans text-3xl font-semibold text-zinc-900">
               Design that scales
             </h2>
-            <p className="font-geist text-zinc-600 max-w-md">
+            <p className="font-sans text-zinc-600 max-w-md">
               Interfaces, components, and systems built to grow with your product.
             </p>
           </div>
@@ -42,13 +42,13 @@ const Bento = () => {
           <div className="absolute inset-0 bg-linear-to-t from-white via-white/70 to-transparent" />
 
           <div className="relative h-full flex flex-col justify-end p-8 gap-2">
-            <span className="font-geist-mono text-xs uppercase tracking-wider text-zinc-500">
+            <span className="font-mono text-xs uppercase tracking-wider text-zinc-500">
               Engineering
             </span>
-            <h2 className="font-geist text-2xl font-semibold text-zinc-900">
+            <h2 className="font-sans text-2xl font-semibold text-zinc-900">
               Built for performance
             </h2>
-            <p className="font-geist text-zinc-600">
+            <p className="font-sans text-zinc-600">
               Clean, scalable code with modern stacks and best practices.
             </p>
           </div>
@@ -66,13 +66,13 @@ const Bento = () => {
           <div className="absolute inset-0 bg-linear-to-t from-white via-white/70 to-transparent" />
 
           <div className="relative h-full flex flex-col justify-end p-8 gap-2">
-            <span className="font-geist-mono text-xs uppercase tracking-wider text-zinc-500">
+            <span className="font-mono text-xs uppercase tracking-wider text-zinc-500">
               Motion
             </span>
-            <h2 className="font-geist text-2xl font-semibold text-zinc-900">
+            <h2 className="font-sans text-2xl font-semibold text-zinc-900">
               Motion with intent
             </h2>
-            <p className="font-geist text-zinc-600">
+            <p className="font-sans text-zinc-600">
               Subtle interactions that guide users and feel effortless.
             </p>
           </div>
@@ -90,13 +90,13 @@ const Bento = () => {
           <div className="absolute inset-0 bg-linear-to-t from-white via-white/70 to-transparent" />
 
           <div className="relative h-full flex flex-col justify-end p-8 gap-2">
-            <span className="font-geist-mono text-xs uppercase tracking-wider text-zinc-500">
+            <span className="font-mono text-xs uppercase tracking-wider text-zinc-500">
               Launch
             </span>
-            <h2 className="font-geist text-3xl font-semibold text-zinc-900">
+            <h2 className="font-sans text-3xl font-semibold text-zinc-900">
               From idea to impact
             </h2>
-            <p className="font-geist text-zinc-600 max-w-md">
+            <p className="font-sans text-zinc-600 max-w-md">
               MVPs, product launches, and long-term scale — end to end.
             </p>
           </div>

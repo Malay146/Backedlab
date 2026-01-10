@@ -5,50 +5,65 @@ import { motion, AnimatePresence } from "motion/react";
 
 const faqs = [
   {
-    q: "What services do you offer?",
-    a: "We handle product design, UI/UX, branding, frontend and backend development, and launch support.",
+    q: "What kind of services does your studio actually provide?",
+    a: "We cover the entire product lifecycle — from product strategy and UI/UX design to branding, frontend and backend development. We also help with launch, performance optimization, and long-term product evolution.",
   },
   {
-    q: "Do you work with startups or established companies?",
-    a: "Both. We work with early-stage startups, growing teams, and established products.",
+    q: "Do you usually work with early-stage startups or established companies?",
+    a: "Both. We regularly partner with early-stage startups to shape ideas from scratch, as well as established teams looking to redesign, scale, or improve existing products.",
   },
   {
-    q: "What does your process look like?",
-    a: "Discovery, design, development, and iteration — with clear milestones and feedback loops.",
+    q: "How does your overall process work from idea to launch?",
+    a: "Our process is structured but flexible. We start with discovery and alignment, move into design and prototyping, then development and iteration. You’ll have clear milestones, regular updates, and feedback loops throughout.",
   },
   {
-    q: "How long does a typical project take?",
-    a: "Most projects take between 4–12 weeks, depending on scope and complexity.",
+    q: "How long does a typical design and development project take?",
+    a: "Most projects take between 4 to 12 weeks. The exact timeline depends on scope, complexity, and how quickly feedback and approvals move during the project.",
   },
   {
-    q: "Do you handle both design and development?",
-    a: "Yes. Everything is handled in-house for speed, consistency, and scalability.",
+    q: "Do you handle both product design and development in-house?",
+    a: "Yes. Design and development are handled together in-house. This helps us move faster, maintain consistency, and ensure that what’s designed is built exactly as intended.",
   },
   {
-    q: "Do you provide support after launch?",
-    a: "Yes. We continue working with teams post-launch to improve and scale products.",
+    q: "Do you continue supporting products after they are launched?",
+    a: "Absolutely. Post-launch support includes improvements, feature additions, performance tweaks, and scaling support. Many teams continue working with us long after the initial launch.",
   },
+  {
+  q: "How involved do clients usually need to be during the project?",
+  a: "We keep collaboration lightweight and focused. You’ll be involved during key decisions and reviews, but we handle the day-to-day execution so you can stay focused on your business.",
+},
+{
+  q: "How do you usually price your design and development projects?",
+  a: "Projects are priced based on scope, complexity, and timeline. We typically work with clear, upfront pricing rather than hourly billing to keep things predictable and transparent.",
+},
+{
+  q: "Can you collaborate remotely with teams in different locations?",
+  a: "Yes. We work remotely with teams across different time zones using async communication, regular check-ins, and shared tools to keep everything aligned and moving smoothly.",
+},
+
 ];
+
+
 
 const FAQ = () => {
   const [active, setActive] = useState<number | null>(null);
 
   return (
     <section className="w-full py-12">
-      <div className="max-w-[760px] mx-auto px-6">
+      <div className="max-w-5xl mx-auto px-6">
 
         {/* Header */}
         <div className="mb-10">
-          <p className="font-geist-mono text-xs uppercase tracking-widest text-zinc-400 mb-3">
+          <p className="font-mono text-xs uppercase tracking-widest text-zinc-400 mb-3">
             FAQ
           </p>
-          <h2 className="font-geist text-4xl font-medium text-zinc-900">
-            You ask. We answers.
+          <h2 className="font-sans text-4xl font-medium text-zinc-900">
+            You ask. We answer.
           </h2>
         </div>
 
         {/* List */}
-        <motion.div layout className="border border-zinc-200 select-none">
+        <motion.div layout className="border border-zinc-200 select-none bg-white">
           {faqs.map((item, i) => {
             const open = active === i;
 
@@ -69,7 +84,7 @@ const FAQ = () => {
                 >
                   <motion.p 
                     layout="position"
-                    className="font-geist text-lg text-zinc-900"
+                    className="font-sans text-xl text-zinc-900"
                   >
                     {item.q}
                   </motion.p>
@@ -81,7 +96,7 @@ const FAQ = () => {
                       opacity: { duration: 0.2 },
                       layout: { duration: 0.3, ease: [0.4, 0, 0.2, 1] }
                     }}
-                    className="font-geist-mono text-xs text-zinc-500"
+                    className="font-mono text-sm text-zinc-500"
                   >
                     {String(i + 1).padStart(2, "0")}
                   </motion.span>
@@ -99,7 +114,7 @@ const FAQ = () => {
                         ease: [0.4, 0, 0.2, 1]
                       }}
                     >
-                      <p className="font-geist text-zinc-600 leading-relaxed max-w-160">
+                      <p className="font-sans text-zinc-600 leading-relaxed max-w-180 text-md">
                         {item.a}
                       </p>
                     </motion.div>

@@ -30,10 +30,10 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-8 mb-12">
           {/* Brand */}
           <div className="md:col-span-5">
-            <h3 className="font-geist text-2xl font-semibold text-zinc-900 mb-4">
+            <h3 className="font-sans text-2xl font-semibold text-zinc-900 mb-4">
                 <MainLogo />
             </h3>
-            <p className="font-geist text-sm text-zinc-600 leading-relaxed max-w-md">
+            <p className="font-sans text-sm text-zinc-600 leading-relaxed max-w-md">
               A design and development studio crafting minimal, high-performance
               websites and products for modern brands.
             </p>
@@ -43,7 +43,7 @@ const Footer = () => {
           <div className="md:col-span-7 grid grid-cols-3 gap-8">
             {/* Product */}
             <div>
-              <h4 className="font-geist-mono text-xs uppercase tracking-widest text-zinc-400 mb-4">
+              <h4 className="font-mono text-xs uppercase tracking-widest text-zinc-400 mb-4">
                 Product
               </h4>
               <ul className="space-y-3">
@@ -51,7 +51,7 @@ const Footer = () => {
                   <li key={link.name}>
                     <Link
                       href={link.href}
-                      className="font-geist text-sm text-zinc-600 hover:text-zinc-900 transition-colors"
+                      className="font-sans text-sm text-zinc-600 hover:text-zinc-900 transition-colors"
                     >
                       {link.name}
                     </Link>
@@ -62,7 +62,7 @@ const Footer = () => {
 
             {/* Company */}
             <div>
-              <h4 className="font-geist-mono text-xs uppercase tracking-widest text-zinc-400 mb-4">
+              <h4 className="font-mono text-xs uppercase tracking-widest text-zinc-400 mb-4">
                 Company
               </h4>
               <ul className="space-y-3">
@@ -70,7 +70,7 @@ const Footer = () => {
                   <li key={link.name}>
                     <Link
                       href={link.href}
-                      className="font-geist text-sm text-zinc-600 hover:text-zinc-900 transition-colors"
+                      className="font-sans text-sm text-zinc-600 hover:text-zinc-900 transition-colors"
                     >
                       {link.name}
                     </Link>
@@ -81,7 +81,7 @@ const Footer = () => {
 
             {/* Social */}
             <div>
-              <h4 className="font-geist-mono text-xs uppercase tracking-widest text-zinc-400 mb-4">
+              <h4 className="font-mono text-xs uppercase tracking-widest text-zinc-400 mb-4">
                 Social
               </h4>
               <ul className="space-y-3">
@@ -89,7 +89,7 @@ const Footer = () => {
                   <li key={link.name}>
                     <Link
                       href={link.href}
-                      className="font-geist text-sm text-zinc-600 hover:text-zinc-900 transition-colors"
+                      className="font-sans text-sm text-zinc-600 hover:text-zinc-900 transition-colors"
                     >
                       {link.name}
                     </Link>
@@ -102,19 +102,19 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-zinc-200 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="font-geist-mono text-xs text-zinc-500">
+          <p className="font-mono text-xs text-zinc-500">
             © {currentYear} BackedLab. All rights reserved.
           </p>
           <div className="flex items-center gap-6">
             <Link
               href="#privacy"
-              className="font-geist-mono text-xs text-zinc-500 hover:text-zinc-900 transition-colors"
+              className="font-mono text-xs text-zinc-500 hover:text-zinc-900 transition-colors"
             >
               Privacy
             </Link>
             <Link
               href="#terms"
-              className="font-geist-mono text-xs text-zinc-500 hover:text-zinc-900 transition-colors"
+              className="font-mono text-xs text-zinc-500 hover:text-zinc-900 transition-colors"
             >
               Terms
             </Link>

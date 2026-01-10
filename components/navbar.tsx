@@ -37,14 +37,14 @@ const Navbar = () => {
               <TextAnimation key={link.name}>
                 <Link
                   href={link.href}
-                  className="text-black font-medium leading-none px-2 py-1 transition-colors"
+                  className="font-sans text-black font-medium leading-none px-2 py-1 transition-colors"
                 >
                   {link.name}
                 </Link>
               </TextAnimation>
             ))}
             <TextAnimation className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-full transition cursor-pointer leading-none">
-              <button>Book a Call</button>
+              <button className="font-sans">Book a Call</button>
             </TextAnimation>
           </div>
 
@@ -86,7 +86,7 @@ const Navbar = () => {
                     <Link
                       href={link.href}
                       onClick={toggleMenu}
-                      className="text-black font-medium text-lg py-3 px-4 rounded-lg transition block"
+                      className="font-sans text-black font-medium text-lg py-3 px-4 rounded-lg transition block"
                     >
                       {link.name}
                     </Link>
@@ -98,7 +98,7 @@ const Navbar = () => {
                   transition={{ duration: 0.3, delay: links.length * 0.1 }}
                   whileTap={{ scale: 0.95 }}
                   onClick={toggleMenu}
-                  className="mt-4 px-6 py-3 bg-blue-600 text-white rounded-full transition font-medium"
+                  className="font-sans mt-4 px-6 py-3 bg-blue-600 text-white rounded-full transition font-medium"
                 >
                   Book a Call
                 </motion.button>
