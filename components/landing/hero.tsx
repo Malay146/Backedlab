@@ -26,12 +26,13 @@ const Hero = () => {
           >
             {" "}
             <span className="inline-block size-2 rounded-full bg-blue-700 mr-1 animate-pulse" />
-            BASED ON THE INTERNET
+            BUILDING FOR THE INTERNET, WORLDWIDE
           </motion.p>
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
+            className="font-inter leading-tight"
           >
             Designing systems.
           </motion.h1>
@@ -39,6 +40,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
+            className="font-inter leading-tight"
           >
             Building interfaces.
           </motion.h1>
@@ -48,7 +50,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.5 }}
-          className="font-sans max-w-lg text-zinc-700 text-base md:text-lg leading-relaxed"
+          className="max-w-lg text-zinc-700 text-base md:text-lg leading-relaxed"
         >
           We're a design and development studio crafting minimal,
           high-performance websites and products for modern brands.
@@ -60,7 +62,7 @@ const Hero = () => {
           transition={{ duration: 0.5, delay: 0.6 }}
           className="flex flex-row items-stretch sm:items-center gap-4"
         >
-          <div className="group flex gap-3 justify-center items-center font-sans font-medium bg-blue-600 px-4 py-2 rounded-md cursor-pointer text-sm md:text-base relative z-10">
+          <div className="group flex gap-3 justify-center items-center font-inter font-medium bg-blue-600 px-4 py-2 rounded-md cursor-pointer text-sm md:text-base relative z-10">
             <button className="inline-block cursor-pointer">
               <span className="text-white chroma-text-out chroma-text-out-animate">
                 Start a Project
@@ -71,7 +73,7 @@ const Hero = () => {
 
           <Link
             href="/works"
-            className="font-sans border border-zinc-700 px-4 py-2 text-black group rounded-md cursor-pointer text-sm md:text-base font-medium"
+            className="font-inter border border-zinc-700 px-4 py-2 text-black group rounded-md cursor-pointer text-sm md:text-base font-medium"
           >
             <button className="cursor-pointer chroma-text-out chroma-text-out-animate text-black">See Our Work</button>
           </Link>

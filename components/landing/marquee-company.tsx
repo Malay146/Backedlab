@@ -30,7 +30,7 @@ const MarqueeCompany = () => {
 
   return (
     <div className="flex flex-col items-center mt-16 w-full overflow-hidden px-4 sm:px-6 lg:px-8">
-      <h2 className="font-mono mb-4 md:mb-6 text-sm md:text-md text-zinc-500 tracking-wider font-semibold text-center">
+      <h2 className="font-inter mb-4 md:mb-6 text-sm md:text-md text-zinc-500 tracking-wider font-semibold text-center">
         Trusted by Companies Worldwide
       </h2>
 

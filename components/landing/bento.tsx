@@ -21,7 +21,7 @@ const Bento = () => {
             <span className="font-mono text-xs uppercase tracking-wider text-zinc-500">
               Design
             </span>
-            <h2 className="font-sans text-3xl font-semibold text-zinc-900">
+            <h2 className="font-inter text-3xl font-semibold text-zinc-900">
               Design that scales
             </h2>
             <p className="font-sans text-zinc-600 max-w-md">
@@ -45,7 +45,7 @@ const Bento = () => {
             <span className="font-mono text-xs uppercase tracking-wider text-zinc-500">
               Engineering
             </span>
-            <h2 className="font-sans text-2xl font-semibold text-zinc-900">
+            <h2 className="font-inter text-3xl font-semibold text-zinc-900">
               Built for performance
             </h2>
             <p className="font-sans text-zinc-600">
@@ -69,7 +69,7 @@ const Bento = () => {
             <span className="font-mono text-xs uppercase tracking-wider text-zinc-500">
               Motion
             </span>
-            <h2 className="font-sans text-2xl font-semibold text-zinc-900">
+            <h2 className="font-inter text-3xl font-semibold text-zinc-900">
               Motion with intent
             </h2>
             <p className="font-sans text-zinc-600">
@@ -93,7 +93,7 @@ const Bento = () => {
             <span className="font-mono text-xs uppercase tracking-wider text-zinc-500">
               Launch
             </span>
-            <h2 className="font-sans text-3xl font-semibold text-zinc-900">
+            <h2 className="font-inter text-3xl font-semibold text-zinc-900">
               From idea to impact
             </h2>
             <p className="font-sans text-zinc-600 max-w-md">

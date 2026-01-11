@@ -1,64 +1,63 @@
 "use client";
-import React, { useState } from 'react';
-import Navbar from '@/components/navbar';
-import Footer from '@/components/footer';
-import Image from 'next/image';
-import { AnimatePresence, motion } from 'motion/react';
-import Link from 'next/link';
-import { Menu, X } from 'lucide-react';
-import { cn } from '@/utils/cn';
-
+import React, { useState } from "react";
+import Navbar from "@/components/navbar";
+import Footer from "@/components/footer";
+import Image from "next/image";
+import { AnimatePresence, motion } from "motion/react";
+import Link from "next/link";
+import { Menu, X } from "lucide-react";
+import { cn } from "@/utils/cn";
 
 const works = [
   {
-    image: '/work.png',
-    company: 'Dashboard for Load Trends',
+    image: "/work.png",
+    company: "Dashboard for Load Trends",
   },
   {
-    image: '/work.png',
-    company: 'Analytics Platform',
+    image: "/work.png",
+    company: "Analytics Platform",
   },
   {
-    image: '/work.png',
-    company: 'E-Commerce Redesign',
+    image: "/work.png",
+    company: "E-Commerce Redesign",
   },
 ];
 
 const WorksPage = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-      const [isMenuOpen, setIsMenuOpen] = useState(false);
-    
-      const links = [
-        { name: "Home", href: "/" },
-      ];
-    
-      const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+  const links = [{ name: "Home", href: "/" }];
+
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   return (
     <div className="min-h-screen flex flex-col bg-white">
       {/* Desktop & Mobile Navbar */}
-      <div className="w-full flex items-center justify-center fixed top-4 md:top-8 z-50 px-4">
+      <div className="w-full flex items-center justify-center fixed top-2 md:top-8 z-50 px-2 md:px-4">
         <motion.div
           initial={{ y: -100, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.5 }}
-          className="w-full max-w-6xl pl-4 pr-3 py-2 bg-white/30 border border-[#E5E5E5] rounded-lg flex items-center justify-between backdrop-blur-sm"
+          className="w-full max-w-6xl pl-2 md:pl-4 pr-2 md:pr-3 py-2 bg-white/30 border border-[#E5E5E5] rounded-lg flex items-center justify-between backdrop-blur-sm"
         >
-           <Link href="/" className="cursor-pointer">
-            <MainLogo className="w-24 md:w-auto" />
+          <Link href="/" className="cursor-pointer">
+            <MainLogo className="w-20 md:w-24 lg:w-auto" />
           </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-4">
             {links.map((link) => (
-                <a
-                  href={link.href}
-                  className="font-sans text-black leading-none px-2 py-1 transition-colors"
-                >
-                  {link.name}
-                </a>
+              <a
+                key={link.name}
+                href={link.href}
+                className="font-inter text-black leading-none px-2 py-1 transition-colors"
+              >
+                {link.name}
+              </a>
             ))}
-              <button className="font-sans px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-md transition cursor-pointer">Book a Call</button>
+            <button className="font-inter px-4 py-2 bg-blue-600 text-white rounded-md transition cursor-pointer group font-medium">
+              <span className="chroma-text-out chroma-text-out-animate">Book a Call</span>
+            </button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -85,10 +84,10 @@ const WorksPage = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
-            className="fixed top-25 md:top-30 left-4 right-4 z-40 lg:hidden"
+            className="fixed top-16 left-2 right-2 z-40 lg:hidden"
           >
             <div className="bg-white/95 backdrop-blur-md border border-[#E5E5E5] rounded-3xl shadow-xl overflow-hidden">
-              <nav className="flex flex-col p-6">
+              <nav className="flex flex-col p-4 md:p-6">
                 {links.map((link, index) => (
                   <motion.div
                     key={link.name}
@@ -99,7 +98,7 @@ const WorksPage = () => {
                     <Link
                       href={link.href}
                       onClick={toggleMenu}
-                      className="font-sans text-black font-medium text-lg py-3 px-4 rounded-lg transition block"
+                      className="font-sans text-black font-medium text-base md:text-lg py-2 md:py-3 px-3 md:px-4 rounded-lg transition block"
                     >
                       {link.name}
                     </Link>
@@ -111,7 +110,7 @@ const WorksPage = () => {
                   transition={{ duration: 0.3, delay: links.length * 0.1 }}
                   whileTap={{ scale: 0.95 }}
                   onClick={toggleMenu}
-                  className="font-sans mt-4 px-6 py-3 bg-blue-600 text-white rounded-md transition font-medium"
+                  className="font-sans mt-2 md:mt-4 px-4 md:px-6 py-2 md:py-3 bg-blue-600 text-white rounded-md transition font-medium"
                 >
                   Book a Call
                 </motion.button>
@@ -120,22 +119,29 @@ const WorksPage = () => {
           </motion.div>
         )}
       </AnimatePresence>
-      
-      <main className="flex-1 w-full flex flex-col items-center pb-8 mt-30">
-        <div className="w-full max-w-5xl flex flex-col gap-8 px-2">
+
+      <main className="flex-1 w-full flex flex-col items-center pb-8 mt-24 md:mt-32">
+        <div className="w-full max-w-5xl flex flex-col gap-8 px-2 md:px-4">
           {works.map((work, idx) => (
-            <div key={idx} className="w-full border border-zinc-200 rounded-lg bg-white flex flex-col items-center overflow-hidden shadow-sm relative">
-              <div className="w-full h-160 relative">
+            <div
+              key={idx}
+              className="w-full border border-zinc-200 rounded-lg bg-white flex flex-col items-center overflow-hidden shadow-sm relative"
+            >
+              <div className="w-full h-60 sm:h-80 md:h-96 lg:h-128 relative">
                 <Image
                   src={work.image}
                   alt={work.company}
                   fill
-                  style={{ objectFit: 'cover' }}
+                  style={{ objectFit: "cover" }}
                   className="rounded-lg"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 60vw"
+                  priority={idx === 0}
                 />
-                <div className="flex items-center gap-3 absolute bottom-3 left-4 w-[90%] bg-white/80 backdrop-blur-sm px-3 py-2 rounded-md border border-zinc-200">
-                  <span className="inline-block size-7 rounded-sm bg-zinc-600"></span>
-                  <span className="font-mono text-base text-zinc-700 font-medium tracking-wide">{work.company}</span>
+                <div className="flex items-center gap-2 sm:gap-3 absolute bottom-2 sm:bottom-3 left-2 sm:left-4 w-[90%] bg-white/80 backdrop-blur-sm px-2 sm:px-3 py-2 rounded-md border border-zinc-200">
+                  <span className="inline-block w-6 h-6 sm:size-7 rounded-sm bg-zinc-600"></span>
+                  <span className="font-mono text-sm sm:text-base text-zinc-700 font-medium tracking-wide">
+                    {work.company}
+                  </span>
                 </div>
               </div>
             </div>

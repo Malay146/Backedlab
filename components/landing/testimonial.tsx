@@ -70,7 +70,7 @@ const Testimonial = () => {
           {/* <p className="text-sm font-mono font-medium text-zinc-500 mb-3">
             /05 TESTIMONIALS
           </p> */}
-          <h2 className="text-5xl font-medium tracking-tight text-zinc-900">
+          <h2 className="font-inter text-5xl font-medium tracking-tight text-zinc-900">
             Client feedback
           </h2>
         </div>

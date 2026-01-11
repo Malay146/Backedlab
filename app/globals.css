@@ -12,9 +12,11 @@ html {
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-family-sans: var(--font-roboto), system-ui, -apple-system, sans-serif;
-  --font-family-mono: var(--font-geist-mono), "Courier New", monospace;
+  --font-mono: var(--font-geist-mono), "Courier New", monospace;
+  --font-inter: var(--font-inter);  
 }
+
+
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -26,7 +28,7 @@ html {
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-roboto), system-ui, -apple-system, sans-serif;
+  font-family: var(--font-family-inter);
 }
 
 .chroma-text-out.text-white,

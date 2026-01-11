@@ -38,12 +38,12 @@ const Navbar = () => {
             {links.map((link) => (
               <a
                 href={link.href}
-                className="font-sans text-black leading-none px-2 py-1 transition-colors"
+                className="font-inter text-black leading-none px-2 py-1 transition-colors"
               >
                 {link.name}
               </a>
             ))}
-            <button className="group font-sans font-medium px-4 py-2 bg-blue-600 rounded-md transition cursor-pointer">
+            <button className="group font-inter font-medium px-4 py-2 bg-blue-600 rounded-md transition cursor-pointer">
               <span className="chroma-text-out chroma-text-out-animate text-white">
                 Book a Call
               </span>

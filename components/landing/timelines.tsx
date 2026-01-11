@@ -50,10 +50,10 @@ const Timelines = () => {
   ];
 
   return (
-    <div className="w-full">
+    <div className="w-full px-6 py-2">
       <section className="w-full">
         <div className="max-w-6xl mx-auto py-20">
-          <h2 className="font-sans font-medium text-5xl tracking-tight mb-12">
+          <h2 className="font-inter font-medium text-5xl tracking-tight mb-12">
             Delivery timelines
           </h2>
           {/* <p className="text-zinc-600 mb-12 max-w-xl">

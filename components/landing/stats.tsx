@@ -30,13 +30,13 @@ const Stats = () => {
     ];  
 
   return (
-    <div className="w-full flex flex-col items-center justify-center py-12 mt-10 border-b border-zinc-300">
+    <div className="w-full flex flex-col items-center justify-center py-24 border-b border-zinc-300 px-6">
       <motion.h1
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.5, ease: "easeOut" }}
-        className="font-sans text-5xl tracking-tight font-medium max-w-6xl w-full text-left"
+        className="font-inter text-5xl tracking-tight font-medium max-w-6xl w-full text-left"
       >
         By the numbers
       </motion.h1>
@@ -63,7 +63,7 @@ const Stats = () => {
             }`}
           >
             <AnimatedNumber value={stat.value} delay={0.4 + i * 0.1} />
-            <p className="font-sans text-lg font-medium">{stat.title}</p>
+            <p className="font-inter text-lg font-medium">{stat.title}</p>
             <p className="font-sans text-sm text-zinc-500">{stat.meta}</p>
           </motion.div>
         ))}

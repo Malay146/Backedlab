@@ -1,6 +1,14 @@
 import React from "react";
 import Link from "next/link";
 import { cn } from "@/utils/cn";
+import India from "./Icons/flags/india";
+import America from "./Icons/flags/america";
+import Singapore from "./Icons/flags/singapore";
+import Australia from "./Icons/flags/australia";
+import Germany from "./Icons/flags/germany";
+import Italy from "./Icons/flags/italy";
+import Europe from "./Icons/flags/europe";
+import Japan from "./Icons/flags/japan";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -31,12 +39,27 @@ const Footer = () => {
           {/* Brand */}
           <div className="md:col-span-5">
             <h3 className="font-sans text-2xl font-semibold text-zinc-900 mb-4">
-                <MainLogo />
+              <MainLogo />
             </h3>
-            <p className="font-sans text-sm text-zinc-600 leading-relaxed max-w-md">
+            <p className="font-sans text-sm text-zinc-600 leading-relaxed max-w-md mb-4">
               A design and development studio crafting minimal, high-performance
               websites and products for modern brands.
             </p>
+            <div className="">
+              <p className="font-sans text-sm text-zinc-900 font-medium leading-relaxed max-w-md">
+                Working with clients across the globe
+              </p>
+              <div className="flex gap-2">
+                <India className="size-6" />
+                <America className="size-6" />
+                <Singapore className="size-6" />
+                <Australia className="size-6" />
+                <Germany className="size-6" />
+                <Italy className="size-6" />
+                <Europe className="size-6" />
+                <Japan className="size-6" />
+              </div>
+            </div>
           </div>
 
           {/* Links */}
