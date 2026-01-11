@@ -60,17 +60,21 @@ const Hero = () => {
           transition={{ duration: 0.5, delay: 0.6 }}
           className="flex flex-row items-stretch sm:items-center gap-4"
         >
-          <div className="flex gap-3 justify-center items-center font-sans font-medium bg-blue-600 px-4 py-2 text-white rounded-md cursor-pointer text-sm md:text-base">
-            <button className="inline-block">Start a Project</button>
-            <ArrowRight className="size-4 md:size-5 inline-block" />{" "}
+          <div className="group flex gap-3 justify-center items-center font-sans font-medium bg-blue-600 px-4 py-2 rounded-md cursor-pointer text-sm md:text-base relative z-10">
+            <button className="inline-block cursor-pointer">
+              <span className="text-white chroma-text-out chroma-text-out-animate">
+                Start a Project
+              </span>
+            </button>
+            <ArrowRight className="size-4 md:size-5 inline-block text-white" />
           </div>
 
-          <Link href="/works" className="font-sans border border-zinc-700 px-4 py-2 text-black rounded-md cursor-pointer text-sm md:text-base ">
-            <button className="font-medium">
-              See Our Work
-            </button>
+          <Link
+            href="/works"
+            className="font-sans border border-zinc-700 px-4 py-2 text-black group rounded-md cursor-pointer text-sm md:text-base font-medium"
+          >
+            <button className="cursor-pointer chroma-text-out chroma-text-out-animate text-black">See Our Work</button>
           </Link>
-          
         </motion.div>
       </motion.div>
 

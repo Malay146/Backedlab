@@ -43,8 +43,10 @@ const Navbar = () => {
                 {link.name}
               </a>
             ))}
-            <button className="font-sans px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-md transition cursor-pointer">
-              Book a Call
+            <button className="group font-sans font-medium px-4 py-2 bg-blue-600 rounded-md transition cursor-pointer">
+              <span className="chroma-text-out chroma-text-out-animate text-white">
+                Book a Call
+              </span>
             </button>
           </div>
 

@@ -38,10 +38,11 @@ const FeatureWork = () => {
           ))}
         </Marquee>
       </div>
-      <Link href="/works" className="border border-zinc-700 px-4 py-2 text-black rounded-lg cursor-pointer">
-        <button className="font-sans flex gap-2 items-center font-medium">
-          View Work <ArrowRight size={16} />
+      <Link href="/works" className="border border-zinc-700 px-4 py-2 text-black rounded-lg cursor-pointer group flex items-center gap-2 font-medium font-sans">
+        <button className="chroma-text-out chroma-text-out-animate cursor-pointer">
+          View Work 
         </button>
+        <ArrowRight size={16}  className="inline-block"/>
       </Link>
     </div>
   );
