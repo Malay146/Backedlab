@@ -4,8 +4,8 @@ const WhatWeDo = () => {
   return (
     <section className="w-full flex flex-col items-center py-20 gap-12 bg-zinc-100 mt-10 border-y border-zinc-300">
       {/* Section Title */}
-      <div className="text-center space-y-4">
-        <h1 className="font-sans text-6xl tracking-tight">
+      <div className="w-full max-w-6xl">
+        <h1 className="font-sans text-5xl font-medium tracking-tight text-left">
           What we actually do
         </h1>
         {/* <p className="font-sans text-zinc-600 max-w-2xl text-balance">
@@ -15,7 +15,7 @@ const WhatWeDo = () => {
       </div>
 
       {/* Cards Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-3 border border-zinc-300 bg-[#fafafa] max-w-6xl ">
+      <div className="grid grid-cols-1 md:grid-cols-3 border border-zinc-300 bg-[#fafafa] max-w-6xl items-center">
         {/* Card 01 */}
         <div className="p-8 min-h-90 flex flex-col justify-between">
           <div className="space-y-5">

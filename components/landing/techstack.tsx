@@ -65,7 +65,7 @@ const Techstack = () => {
   return (
     <div className="w-full">
       <section className="w-full">
-        <div className="max-w-7xl mx-auto px-6 py-20">
+        <div className="max-w-6xl mx-auto px-6 py-20">
           {/* Section header */}
           <h2 className="font-sans font-medium text-5xl tracking-tight mb-12">
             Our techstack

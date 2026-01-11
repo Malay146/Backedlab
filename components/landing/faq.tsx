@@ -49,15 +49,15 @@ const FAQ = () => {
   const [active, setActive] = useState<number | null>(null);
 
   return (
-    <section className="w-full py-12">
-      <div className="max-w-5xl mx-auto px-6">
+    <section className="w-full">
+      <div className="max-w-6xl mx-auto px-6 py-20">
 
         {/* Header */}
         <div className="mb-10">
-          <p className="font-mono text-xs uppercase tracking-widest text-zinc-400 mb-3">
+          {/* <p className="font-mono text-xs uppercase tracking-widest text-zinc-400 mb-3">
             FAQ
-          </p>
-          <h2 className="font-sans text-4xl font-medium text-zinc-900">
+          </p> */}
+          <h2 className="font-sans text-5xl tracking-tight font-medium text-zinc-900">
             You ask. We answer.
           </h2>
         </div>
@@ -114,7 +114,7 @@ const FAQ = () => {
                         ease: [0.4, 0, 0.2, 1]
                       }}
                     >
-                      <p className="font-sans text-zinc-600 leading-relaxed max-w-180 text-md">
+                      <p className="font-sans text-zinc-600 leading-relaxed max-w-4xl text-md">
                         {item.a}
                       </p>
                     </motion.div>

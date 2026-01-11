@@ -36,7 +36,7 @@ const Stats = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.5, ease: "easeOut" }}
-        className="font-sans text-6xl tracking-tight"
+        className="font-sans text-5xl tracking-tight font-medium max-w-6xl w-full text-left"
       >
         By the numbers
       </motion.h1>

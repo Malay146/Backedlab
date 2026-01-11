@@ -4,7 +4,7 @@ import Image from "next/image";
 const Bento = () => {
   return (
     <div className="w-full py-20 bg-zinc-100  border-y border-zinc-200">
-      <div className="max-w-300 min-h-200 grid grid-cols-5 mx-auto border border-zinc-300">
+      <div className="max-w-6xl min-h-200 grid grid-cols-5 mx-auto border border-zinc-300">
 
         {/* Card 1 — Design */}
         <div className="col-span-3 relative border-r border-b border-zinc-300 bg-zinc-100 overflow-hidden">

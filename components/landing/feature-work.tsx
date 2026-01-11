@@ -3,6 +3,7 @@ import Image from "next/image";
 import Marquee from "react-fast-marquee";
 import TextAnimation from "./text-animation";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 const FeatureWork = () => {
   return (
@@ -19,7 +20,7 @@ const FeatureWork = () => {
         >
           {Array.from({ length: 3 }).map((_, index) => (
             <div key={index} className="relative">
-              <div className="w-200 h-120 border border-zinc-300 rounded-2xl relative overflow-hidden mx-4">
+              <div className="w-200 h-120 border border-zinc-300 rounded-lg relative overflow-hidden mx-4">
                 <Image
                   src="/work.png"
                   alt="Feature Work Image"
@@ -27,8 +28,8 @@ const FeatureWork = () => {
                   objectFit="cover"
                 />
               </div>
-              <div className="flex items-center gap-4 absolute bottom-2 left-6 w-[94%] bg-white/80 backdrop-blur-sm px-4 py-2 rounded-lg border border-zinc-200">
-                <span className="inline-block size-8 rounded-md bg-zinc-600"></span>
+              <div className="flex items-center gap-4 absolute bottom-2 left-6 w-[94%] bg-white/80 backdrop-blur-sm px-2 py-2 rounded-md border border-zinc-200">
+                <span className="inline-block size-8 rounded-sm bg-zinc-600"></span>
                 <p className="font-sans text-md font-semibold text-zinc-500 tracking-wide">
                   Dashboard for Load Trends
                 </p>
@@ -37,11 +38,11 @@ const FeatureWork = () => {
           ))}
         </Marquee>
       </div>
-      <TextAnimation className="border border-zinc-700 px-4 py-3 text-black rounded-full cursor-pointer">
+      <Link href="/works" className="border border-zinc-700 px-4 py-2 text-black rounded-lg cursor-pointer">
         <button className="font-sans flex gap-2 items-center font-medium">
           View Work <ArrowRight size={16} />
         </button>
-      </TextAnimation>
+      </Link>
     </div>
   );
 };

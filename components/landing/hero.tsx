@@ -5,6 +5,7 @@ import React from "react";
 import TextAnimation from "./text-animation";
 import { cn } from "@/utils/cn";
 import { motion } from "motion/react";
+import Link from "next/link";
 
 const Hero = () => {
   return (
@@ -59,16 +60,17 @@ const Hero = () => {
           transition={{ duration: 0.5, delay: 0.6 }}
           className="flex flex-row items-stretch sm:items-center gap-4"
         >
-          <TextAnimation className="flex gap-3 justify-center items-center font-sans font-medium bg-blue-600 px-4 py-3 text-white rounded-full cursor-pointer text-sm md:text-base">
+          <div className="flex gap-3 justify-center items-center font-sans font-medium bg-blue-600 px-4 py-2 text-white rounded-md cursor-pointer text-sm md:text-base">
             <button className="inline-block">Start a Project</button>
-            <ArrowRight className="size-4 md:size-5 inline-block ml-2" />{" "}
-          </TextAnimation>
+            <ArrowRight className="size-4 md:size-5 inline-block" />{" "}
+          </div>
 
-          <TextAnimation className="font-sans border border-zinc-700 px-4 py-3 text-black rounded-full cursor-pointer text-sm md:text-base ">
-            <button className="flex justify-center items-center font-medium md:-mb-1.5">
+          <Link href="/works" className="font-sans border border-zinc-700 px-4 py-2 text-black rounded-md cursor-pointer text-sm md:text-base ">
+            <button className="font-medium">
               See Our Work
             </button>
-          </TextAnimation>
+          </Link>
+          
         </motion.div>
       </motion.div>
 

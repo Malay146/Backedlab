@@ -1,26 +1,41 @@
 "use client";
+import React, { useState } from 'react';
+import Navbar from '@/components/navbar';
+import Footer from '@/components/footer';
+import Image from 'next/image';
+import { AnimatePresence, motion } from 'motion/react';
+import Link from 'next/link';
+import { Menu, X } from 'lucide-react';
+import { cn } from '@/utils/cn';
 
-import React, { useState } from "react";
-import Link from "next/link";
-import TextAnimation from "./landing/text-animation";
-import { cn } from "@/utils/cn";
-import { motion, AnimatePresence } from "motion/react";
-import { Menu, X } from "lucide-react";
 
-const Navbar = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+const works = [
+  {
+    image: '/work.png',
+    company: 'Dashboard for Load Trends',
+  },
+  {
+    image: '/work.png',
+    company: 'Analytics Platform',
+  },
+  {
+    image: '/work.png',
+    company: 'E-Commerce Redesign',
+  },
+];
 
-  const links = [
-    { name: "Home", href: "#hero" },
-    { name: "Features", href: "#features" },
-    { name: "Services", href: "#services" },
-    { name: "FAQ", href: "#faq" },
-  ];
+const WorksPage = () => {
 
-  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+      const [isMenuOpen, setIsMenuOpen] = useState(false);
+    
+      const links = [
+        { name: "Home", href: "/" },
+      ];
+    
+      const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   return (
-    <>
+    <div className="min-h-screen flex flex-col bg-white">
       {/* Desktop & Mobile Navbar */}
       <div className="w-full flex items-center justify-center fixed top-4 md:top-8 z-50 px-4">
         <motion.div
@@ -29,23 +44,21 @@ const Navbar = () => {
           transition={{ duration: 0.5 }}
           className="w-full max-w-6xl pl-4 pr-3 py-2 bg-white/30 border border-[#E5E5E5] rounded-lg flex items-center justify-between backdrop-blur-sm"
         >
-          <Link href="/" className="cursor-pointer">
+           <Link href="/" className="cursor-pointer">
             <MainLogo className="w-24 md:w-auto" />
           </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-4">
             {links.map((link) => (
-              <a
-                href={link.href}
-                className="font-sans text-black leading-none px-2 py-1 transition-colors"
-              >
-                {link.name}
-              </a>
+                <a
+                  href={link.href}
+                  className="font-sans text-black leading-none px-2 py-1 transition-colors"
+                >
+                  {link.name}
+                </a>
             ))}
-            <button className="font-sans px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-md transition cursor-pointer">
-              Book a Call
-            </button>
+              <button className="font-sans px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-md transition cursor-pointer">Book a Call</button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -107,11 +120,34 @@ const Navbar = () => {
           </motion.div>
         )}
       </AnimatePresence>
-    </>
+      
+      <main className="flex-1 w-full flex flex-col items-center pb-8 mt-30">
+        <div className="w-full max-w-5xl flex flex-col gap-8 px-2">
+          {works.map((work, idx) => (
+            <div key={idx} className="w-full border border-zinc-200 rounded-lg bg-white flex flex-col items-center overflow-hidden shadow-sm relative">
+              <div className="w-full h-160 relative">
+                <Image
+                  src={work.image}
+                  alt={work.company}
+                  fill
+                  style={{ objectFit: 'cover' }}
+                  className="rounded-lg"
+                />
+                <div className="flex items-center gap-3 absolute bottom-3 left-4 w-[90%] bg-white/80 backdrop-blur-sm px-3 py-2 rounded-md border border-zinc-200">
+                  <span className="inline-block size-7 rounded-sm bg-zinc-600"></span>
+                  <span className="font-mono text-base text-zinc-700 font-medium tracking-wide">{work.company}</span>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </main>
+      <Footer />
+    </div>
   );
 };
 
-export default Navbar;
+export default WorksPage;
 
 const MainLogo = ({ className }: { className?: string }) => (
   <svg
