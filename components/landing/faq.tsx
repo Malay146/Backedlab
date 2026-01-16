@@ -49,8 +49,8 @@ const FAQ = () => {
   const [active, setActive] = useState<number | null>(null);
 
   return (
-    <section className="w-full">
-      <div className="max-w-6xl mx-auto px-6 py-20">
+    <section className="w-full px-6">
+      <div className="max-w-6xl mx-auto py-20">
 
         {/* Header */}
         <div className="mb-10">

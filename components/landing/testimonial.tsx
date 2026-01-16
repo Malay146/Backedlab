@@ -63,8 +63,8 @@ const TESTIMONIALS: Testimonial[] = [
 const Testimonial = () => {
 
   return (
-    <section className="w-full border-y border-zinc-200">
-      <div className="max-w-6xl mx-auto px-6 py-20">
+    <section className="w-full border-y border-zinc-200 px-6">
+      <div className="max-w-6xl mx-auto py-20">
         {/* Header */}
         <div className="mb-12">
           {/* <p className="text-sm font-mono font-medium text-zinc-500 mb-3">

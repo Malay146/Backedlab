@@ -37,6 +37,7 @@ const Navbar = () => {
           <div className="hidden lg:flex items-center gap-4">
             {links.map((link) => (
               <a
+                key={link.name}
                 href={link.href}
                 className="font-inter text-black leading-none px-2 py-1 transition-colors"
               >
