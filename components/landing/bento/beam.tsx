@@ -1,11 +1,12 @@
 "use client";
-import Logo from "@/components/Icons/logo";
+import Logo from "@/components/Icons/logo/logo";
 import Figma from "@/components/Icons/techstack/figma";
 import NextJS from "@/components/Icons/techstack/nextjs";
 import ReactIcon from "@/components/Icons/techstack/react";
 import { AnimatedBeam } from "@/components/ui/animated-beam";
 import { Rocket, ThumbsUp, TrendingUp } from "lucide-react";
 import React, { useRef } from "react";
+import Image from "next/image";
 
 const Beam = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -44,7 +45,9 @@ const Beam = () => {
           ref={centerRef}
           className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 flex size-12 sm:size-16 items-center justify-center rounded-full bg-white border border-zinc-300 shadow-md"
         >
-          <Logo className="size-7 sm:size-8 text-zinc-900" />
+          <div className="size-16 relative">
+            <Image src="/logo.png" alt="Studio Logo" layout="fill" objectFit="contain" />
+          </div>
         </div>
 
         {/* RIGHT — Outcomes */}

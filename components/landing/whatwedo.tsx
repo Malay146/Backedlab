@@ -72,24 +72,19 @@ const WhatWeDo = () => {
         <h1 className="text-5xl font-medium tracking-tight text-left font-inter">
           What we actually do
         </h1>
-        {/* <p className="font-sans text-zinc-600 max-w-2xl text-balance">
-          We design and build digital products with clarity, performance,
-          and long-term scalability in mind.
-        </p> */}
       </div>
-
-      {/* Cards Grid */}
-      {/** Card data array **/}
 
       <div className="grid grid-cols-1 md:grid-cols-3 border border-zinc-300 bg-[#fafafa] max-w-6xl items-center">
         {cards.map((card, idx) => (
           <div
             key={card.number}
-            className={`p-8 min-h-90 flex flex-col justify-between ${card.className}`.trim()}
+            className={`p-8 min-h-90 flex flex-col justify-between ${card.className}`.trim()
+              
+            }
           >
             <div className="space-y-5">
-              <p className="font-mono text-sm text-zinc-500">{card.number}</p>
-              <h3 className="font-inter text-2xl font-semibold">{card.title}</h3>
+              <p className="font-mono text-sm text-blue-900">{card.number}</p>
+              <h3 className="font-inter text-2xl font-semibold bg-linear-to-t from bg-blue-900 bg-clip-text text-transparent">{card.title}</h3>
               <p className="font-sans text-zinc-600 leading-relaxed">
                 {card.description}
               </p>

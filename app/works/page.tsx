@@ -121,7 +121,7 @@ const WorksPage = () => {
       </AnimatePresence>
 
       <main className="flex-1 w-full flex flex-col items-center pb-8 mt-24 md:mt-32">
-        <div className="w-full max-w-5xl flex flex-col gap-8 px-2 md:px-4">
+        <div className="w-full max-w-6xl flex flex-col gap-8 px-2 md:px-4 lg:px-0 mx-auto">
           {works.map((work, idx) => (
             <div
               key={idx}
@@ -133,8 +133,7 @@ const WorksPage = () => {
                   alt={work.company}
                   fill
                   style={{ objectFit: "cover" }}
-                  className="rounded-lg"
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 60vw"
+                  className="rounded-lg w-full"
                   priority={idx === 0}
                 />
                 <div className="flex items-center gap-2 sm:gap-3 absolute bottom-2 sm:bottom-3 left-2 sm:left-4 w-[90%] bg-white/80 backdrop-blur-sm px-2 sm:px-3 py-2 rounded-md border border-zinc-200">

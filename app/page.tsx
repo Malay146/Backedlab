@@ -1,3 +1,4 @@
+"use client";
 import FeatureWork from "@/components/landing/feature-work";
 import Hero from "@/components/landing/hero";
 import MarqueeCompany from "@/components/landing/marquee-company";
@@ -10,13 +11,42 @@ import Footer from "@/components/footer";
 import Timelines from "@/components/landing/timelines";
 import Techstack from "@/components/landing/techstack";
 import Testimonial from "@/components/landing/testimonial";
+import { useOnScreen } from "@/hooks/useOnScreen";
+import dynamic from "next/dynamic";
+
+const PixelBlast = dynamic(
+  () => import("@/components/ui/PixelBlast"),
+  { ssr: false }
+);
+
 
 export default function Home() {
+
+  const {ref, visible} = useOnScreen();
+
   return (
     <div className="min-h-screen w-full bg-[#FAFAFA] text-[#111111] flex flex-col items-center relative overflow-hidden">
       <Navbar />
 
-      <div id="hero" className="w-full flex items-center justify-center">
+      <div
+        id="hero"
+        className="w-full flex items-center justify-center relative"
+        ref={ref}
+      >
+        {/* <PixelBlast
+          variant="square"
+          pixelSize={3}
+          color="#405ff7"
+          patternScale={2}
+          patternDensity={1.3}
+          rippleSpeed={0.3}
+          rippleThickness={0.05}
+          rippleIntensityScale={1}
+          speed={0.8}
+          transparent
+          edgeFade={0.2}
+          className="absolute w-full h-full inset-0 pointer-events-none mt-16 hidden md:block"
+        /> */}
         <Hero />
       </div>
 

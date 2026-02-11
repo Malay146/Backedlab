@@ -5,7 +5,7 @@ import Beam from "./bento/beam";
 
 const Bento = () => {
   return (
-    <section className="w-full py-10 sm:py-20 bg-zinc-100 border-y border-zinc-200">
+    <section className="w-full px-5 py-10 sm:py-20 bg-zinc-100 border-y border-zinc-200">
       <div className="mx-auto max-w-6xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 auto-rows-[340px] sm:auto-rows-[380px] border border-zinc-300 ">
         {/* Card 1 — Workflow (LIGHT) */}
         <div className="col-span-1 lg:col-span-3 relative border-b border-r border-zinc-300 bg-zinc-50 overflow-hidden">

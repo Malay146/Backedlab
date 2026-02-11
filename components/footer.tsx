@@ -33,7 +33,7 @@ const Footer = () => {
 
   return (
     <footer className="w-full border-t border-zinc-200 bg-white">
-      <div className="max-w-350 mx-auto px-6 py-16 md:py-20">
+      <div className="max-w-6xl mx-auto px-6 py-16 md:py-20">
         {/* Main Grid */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-8 mb-12">
           {/* Brand */}

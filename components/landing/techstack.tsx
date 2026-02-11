@@ -80,7 +80,7 @@ const Techstack = () => {
                   index < techStackData.length - 1 ? "border-r border-zinc-200" : ""
                 }`}
               >
-                <h3 className="text-sm font-mono font-semibold text-zinc-900 mb-6">
+                <h3 className="text-sm font-mono font-semibold text-blue-900 mb-6">
                   {column.title}
                 </h3>
 

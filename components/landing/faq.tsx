@@ -54,10 +54,7 @@ const FAQ = () => {
 
         {/* Header */}
         <div className="mb-10">
-          {/* <p className="font-mono text-xs uppercase tracking-widest text-zinc-400 mb-3">
-            FAQ
-          </p> */}
-          <h2 className="font-inter text-5xl tracking-tight font-medium text-zinc-900">
+          <h2 className="font-inter text-3xl sm:text-4xl md:text-5xl tracking-tight font-medium text-zinc-900">
             You ask. We answer.
           </h2>
         </div>
@@ -84,7 +81,7 @@ const FAQ = () => {
                 >
                   <motion.p 
                     layout="position"
-                    className="font-inter text-xl text-zinc-900"
+                    className="font-inter text-base sm:text-lg md:text-xl text-zinc-900"
                   >
                     {item.q}
                   </motion.p>
@@ -114,7 +111,7 @@ const FAQ = () => {
                         ease: [0.4, 0, 0.2, 1]
                       }}
                     >
-                      <p className="font-inter text-zinc-600 leading-relaxed max-w-4xl text-md">
+                      <p className="font-inter text-zinc-600 leading-relaxed max-w-4xl text-sm sm:text-base md:text-lg">
                         {item.a}
                       </p>
                     </motion.div>

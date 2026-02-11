@@ -2,13 +2,16 @@
 
 import React, { useEffect, useRef } from "react";
 import { motion, useInView, useMotionValue, animate } from "motion/react";
+import { cn } from "@/lib/utils";
 
 const AnimatedNumber = ({
   value,
   delay = 0,
+  className
 }: {
   value: string;
   delay?: number;
+  className?: string;
 }) => {
   const ref = useRef<HTMLSpanElement>(null);
   const isInView = useInView(ref, { once: true, margin: "-80px" });
@@ -39,7 +42,7 @@ const AnimatedNumber = ({
   return (
     <span
       ref={ref}
-      className="font-mono text-4xl tracking-tight text-zinc-900"
+      className={cn("font-mono text-4xl tracking-tight text-zinc-900", className)}
     >
       0{suffix}
     </span>
