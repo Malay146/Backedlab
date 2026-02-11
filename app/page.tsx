@@ -33,7 +33,7 @@ export default function Home() {
         className="w-full flex items-center justify-center relative"
         ref={ref}
       >
-        <PixelBlast
+        {/* <PixelBlast
           variant="square"
           pixelSize={3}
           color="#405ff7"
@@ -46,7 +46,7 @@ export default function Home() {
           transparent
           edgeFade={0.2}
           className="absolute w-full h-full inset-0 pointer-events-none mt-16 hidden md:block"
-        />
+        /> */}
         <Hero />
       </div>
 

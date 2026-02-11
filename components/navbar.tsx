@@ -31,8 +31,8 @@ const Navbar = () => {
           className="w-full max-w-6xl pl-4 pr-3 py-2 bg-white/30 border border-[#E5E5E5] rounded-lg flex items-center justify-between backdrop-blur-sm"
         >
           <Link href="/" className="cursor-pointer flex items-center">
-            <Logo className="w-24 md:size-14" />
-            <h1 className="font-bricolage-grotesque font-medium text-2xl">Xocket</h1>
+            <Logo className="size-10 md:size-14" />
+            <h1 className="font-bricolage-grotesque font-medium text-xl md:text-2xl">Xocket</h1>
           </Link>
 
           {/* Desktop Navigation */}
