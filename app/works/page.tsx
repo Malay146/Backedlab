@@ -7,6 +7,7 @@ import { AnimatePresence, motion } from "motion/react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/utils/cn";
+import Logo from "@/components/Icons/logo/logo";
 
 const works = [
   {
@@ -40,8 +41,9 @@ const WorksPage = () => {
           transition={{ duration: 0.5 }}
           className="w-full max-w-6xl pl-2 md:pl-4 pr-2 md:pr-3 py-2 bg-white/30 border border-[#E5E5E5] rounded-lg flex items-center justify-between backdrop-blur-sm"
         >
-          <Link href="/" className="cursor-pointer">
-            <MainLogo className="w-20 md:w-24 lg:w-auto" />
+          <Link href="/" className="cursor-pointer flex items-center">
+            <Logo className="size-10 md:size-14" />
+            <h1 className="font-bricolage-grotesque font-medium text-xl md:text-2xl">Xocket</h1>
           </Link>
 
           {/* Desktop Navigation */}

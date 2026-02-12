@@ -9,6 +9,7 @@ import Germany from "./Icons/flags/germany";
 import Italy from "./Icons/flags/italy";
 import Europe from "./Icons/flags/europe";
 import Japan from "./Icons/flags/japan";
+import Logo from "./Icons/logo/logo";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -38,8 +39,11 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-8 mb-12">
           {/* Brand */}
           <div className="md:col-span-5">
-            <h3 className="font-sans text-2xl font-semibold text-zinc-900 mb-4">
-              <MainLogo />
+            <h3 className="font-sans text-2xl font-semibold text-zinc-900 mb-4 flex items-center">
+              <Logo className="size-10 md:size-14" />
+              <h1 className="font-bricolage-grotesque font-medium text-xl md:text-2xl">
+                Xocket
+              </h1>
             </h3>
             <p className="font-sans text-sm text-zinc-600 leading-relaxed max-w-md mb-4">
               A design and development studio crafting minimal, high-performance
