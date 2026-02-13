@@ -103,7 +103,7 @@ const Navbar = () => {
                   transition={{ duration: 0.3, delay: links.length * 0.1 }}
                   whileTap={{ scale: 0.95 }}
                   onClick={toggleMenu}
-                  className="font-sans mt-4 px-6 py-3 bg-blue-600 text-white rounded-md transition font-medium"
+                  className="font-sans mt-4 px-6 py-3 bg-zinc-900 text-white rounded-md transition font-medium"
                 >
                   Book a Call
                 </motion.button>

@@ -5,29 +5,28 @@ import { animate, motion, useInView, useMotionValue } from "motion/react";
 import AnimatedNumber from "./animated-number";
 
 const Stats = () => {
-
-    const stats = [
-        {
-            value: "24+",
-            title: "Projects shipped",
-            meta: "Web & product design",
-        },
-        {
-            value: "95+",
-            title: "Lighthouse score",
-            meta: "Performance & accessibility",
-        },
-        {
-            value: "5+",
-            title: "Years of experience",
-            meta: "Design & development",
-        },
-        {
-            value: "80%",
-            title: "Client retention",
-            meta: "Long-term collaborations",
-        },
-    ];  
+  const stats = [
+    {
+      value: "24+",
+      title: "Projects shipped",
+      meta: "Web & product design",
+    },
+    {
+      value: "95+",
+      title: "Lighthouse score",
+      meta: "Performance & accessibility",
+    },
+    {
+      value: "5+",
+      title: "Years of experience",
+      meta: "Design & development",
+    },
+    {
+      value: "80%",
+      title: "Client retention",
+      meta: "Long-term collaborations",
+    },
+  ];
 
   return (
     <div className="w-full flex flex-col items-center justify-center py-24 border-b border-zinc-300 px-6">
@@ -62,8 +61,14 @@ const Stats = () => {
               i !== 3 ? "border-r border-zinc-300" : ""
             }`}
           >
-            <AnimatedNumber value={stat.value} className="text-zinc-900" />
-            <p className="font-inter text-lg font-medium">{stat.title}</p>
+            {/* <AnimatedNumber value={stat.value} className="text-zinc-900" /> */}
+            <p className="font-mono text-4xl tracking-tight text-zinc-900">
+              <span className="chroma-card-title">{stat.value}</span>
+            </p>
+            <p className="font-inter text-lg font-medium">
+              {/* <span className="chroma-card-title">{stat.title}</span> */}
+              <p>{stat.title}</p>
+            </p>
             <p className="font-sans text-sm text-zinc-500">{stat.meta}</p>
           </motion.div>
         ))}

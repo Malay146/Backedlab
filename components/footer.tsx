@@ -44,9 +44,9 @@ const Footer = () => {
               <div className="size-10 md:size-14 relative">
                 <Image src="/logo.png" alt="Xocket Logo" fill />
               </div>
-              <h1 className="font-bricolage-grotesque font-medium text-xl md:text-2xl">
+              <p className="font-bricolage-grotesque font-medium text-xl md:text-2xl">
                 Xocket
-              </h1>
+              </p>
             </h3>
             <p className="font-sans text-sm text-zinc-600 leading-relaxed max-w-md mb-4">
               A design and development studio crafting minimal, high-performance

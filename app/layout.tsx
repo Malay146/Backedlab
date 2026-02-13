@@ -30,7 +30,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistMono.variable} ${inter.variable} ${bricolageGrotesque.variable} antialiased`}
+        className={`${geistMono.variable} ${inter.variable} ${bricolageGrotesque.variable} antialiased selection:bg-zinc-800 selection:text-zinc-50`}
       >
         {children}
       </body>

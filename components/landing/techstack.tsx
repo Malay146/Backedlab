@@ -77,11 +77,13 @@ const Techstack = () => {
               <div
                 key={index}
                 className={`p-6 ${
-                  index < techStackData.length - 1 ? "border-r border-zinc-200" : ""
+                  index < techStackData.length - 1
+                    ? "border-r border-zinc-200"
+                    : ""
                 }`}
               >
                 <h3 className="text-sm font-mono font-semibold text-zinc-900 mb-6">
-                  {column.title}
+                  <span className="chroma-card-title">{column.title}</span>
                 </h3>
 
                 <ul className="space-y-4 text-sm text-zinc-700">

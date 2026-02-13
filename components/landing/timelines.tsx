@@ -1,7 +1,6 @@
 import React from "react";
 
 const Timelines = () => {
-
   const timelines = [
     {
       category: "/01 DIGITAL PRODUCT",
@@ -20,7 +19,7 @@ const Timelines = () => {
         { task: "Logo design", duration: "3–5 days" },
         { task: "Full brand identity", duration: "5–10 days" },
         { task: "Brand guidelines", duration: "5 days" },
-        { task: "Brand  uplift / revamp", duration: "10–15 days" }, 
+        { task: "Brand  uplift / revamp", duration: "10–15 days" },
         { task: "Marketing campaign", duration: "min. 1 week" },
         { task: "Merchandise design", duration: "min. 3 days" },
       ],
@@ -66,7 +65,7 @@ const Timelines = () => {
                 className="py-6 px-4 border-r border-zinc-200 last:border-r-0"
               >
                 <h3 className="text-sm font-mono font-semibold text-zinc-900 mb-6">
-                  {col.category}
+                  <span className="chroma-card-title">{col.category}</span>
                 </h3>
 
                 <ul className="space-y-3">
@@ -76,7 +75,9 @@ const Timelines = () => {
                       className="flex justify-between text-sm text-zinc-700"
                     >
                       <span className="font-sans">{task}</span>
-                      <span className="font-mono text-zinc-500">{duration}</span>
+                      <span className="font-mono text-zinc-500">
+                        {duration}
+                      </span>
                     </li>
                   ))}
                 </ul>
