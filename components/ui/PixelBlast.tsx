@@ -32,7 +32,8 @@ interface ReinitConfig {
 type PixelBlastProps = {
   variant?: PixelBlastVariant;
   pixelSize?: number;
-  color?: string;
+  color?: string; // fallback color if colors is not provided
+  colors?: string[]; // array of colors for gradient
   className?: string;
   style?: React.CSSProperties;
   antialias?: boolean;
@@ -186,6 +187,8 @@ const FRAGMENT_SRC = `
 precision highp float;
 
 uniform vec3  uColor;
+uniform int   uColorCount;
+uniform vec3  uColors[8];
 uniform vec2  uResolution;
 uniform float uTime;
 uniform float uPixelSize;
@@ -279,6 +282,16 @@ float maskDiamond(vec2 p, float cov){
   return step(abs(p.x - 0.49) + abs(p.y - 0.49), r);
 }
 
+vec3 getGradientColor(float t) {
+  if (uColorCount == 0) return uColor;
+  float seg = 1.0 / float(uColorCount - 1);
+  float f = clamp(t, 0.0, 1.0);
+  int idx = int(floor(f / seg));
+  if (idx >= uColorCount - 1) idx = uColorCount - 2;
+  float localT = (f - float(idx) * seg) / seg;
+  return mix(uColors[idx], uColors[idx + 1], localT);
+}
+
 void main(){
   float pixelSize = uPixelSize;
   vec2 fragCoord = gl_FragCoord.xy - uResolution * .5;
@@ -336,7 +349,9 @@ void main(){
     M *= fade;
   }
 
-  vec3 color = uColor;
+  // Use a gradient color based on uv.x (horizontal gradient)
+  float gradT = clamp((gl_FragCoord.x / uResolution.x), 0.0, 1.0);
+  vec3 color = getGradientColor(gradT);
 
   // sRGB gamma correction - convert linear to sRGB for accurate color output
   vec3 srgbColor = mix(
@@ -351,10 +366,19 @@ void main(){
 
 const MAX_CLICKS = 10;
 
+const MAX_GRADIENT_COLORS = 8;
+
+const parseColor = (c: string): THREE.Color => {
+  const color = new THREE.Color();
+  color.setStyle(c);
+  return color;
+};
+
 const PixelBlast: React.FC<PixelBlastProps> = ({
   variant = 'square',
   pixelSize = 3,
   color = '#B19EEF',
+  colors,
   className,
   style,
   antialias = true,
@@ -452,10 +476,22 @@ const PixelBlast: React.FC<PixelBlastProps> = ({
       container.appendChild(renderer.domElement);
       if (transparent) renderer.setClearAlpha(0);
       else renderer.setClearColor(0x000000, 1);
+      // Prepare gradient colors
+      let colorArr: string[] = [];
+      if (colors && colors.length > 1) {
+        colorArr = colors.slice(0, MAX_GRADIENT_COLORS);
+      } else {
+        colorArr = [color, color]; // fallback to solid color
+      }
+      const colorVecs = colorArr.map(parseColor);
+      while (colorVecs.length < MAX_GRADIENT_COLORS) colorVecs.push(colorVecs[colorVecs.length - 1]);
+
       const uniforms = {
         uResolution: { value: new THREE.Vector2(0, 0) },
         uTime: { value: 0 },
-        uColor: { value: new THREE.Color(color) },
+        uColor: { value: parseColor(color) },
+        uColorCount: { value: colorArr.length },
+        uColors: { value: colorVecs.map(c => c.clone()) },
         uClickPos: {
           value: Array.from({ length: MAX_CLICKS }, () => new THREE.Vector2(-1, -1))
         },
@@ -630,6 +666,17 @@ const PixelBlast: React.FC<PixelBlastProps> = ({
       t.uniforms.uShapeType.value = SHAPE_MAP[variant] ?? 0;
       t.uniforms.uPixelSize.value = pixelSize * t.renderer.getPixelRatio();
       t.uniforms.uColor.value.set(color);
+      // Update gradient colors
+      let colorArr: string[] = [];
+      if (colors && colors.length > 1) {
+        colorArr = colors.slice(0, MAX_GRADIENT_COLORS);
+      } else {
+        colorArr = [color, color];
+      }
+      const colorVecs = colorArr.map(parseColor);
+      while (colorVecs.length < MAX_GRADIENT_COLORS) colorVecs.push(colorVecs[colorVecs.length - 1]);
+      t.uniforms.uColorCount.value = colorArr.length;
+      t.uniforms.uColors.value = colorVecs.map(c => c.clone());
       t.uniforms.uScale.value = patternScale;
       t.uniforms.uDensity.value = patternDensity;
       t.uniforms.uPixelJitter.value = pixelSizeJitter;
@@ -689,7 +736,7 @@ const PixelBlast: React.FC<PixelBlastProps> = ({
   return (
     <div
       ref={containerRef}
-      className={`w-full h-full overflow-hidden ${className ?? ''}`}
+      className={`w-full h-full overflow-hidden opacity-50 ${className ?? ''}`}
       style={style}
       aria-label="PixelBlast interactive background"
     />

@@ -65,7 +65,7 @@ const Timelines = () => {
                 key={i}
                 className="py-6 px-4 border-r border-zinc-200 last:border-r-0"
               >
-                <h3 className="text-sm font-mono font-semibold text-blue-900 mb-6">
+                <h3 className="text-sm font-mono font-semibold text-zinc-900 mb-6">
                   {col.category}
                 </h3>
 

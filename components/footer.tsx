@@ -10,6 +10,7 @@ import Italy from "./Icons/flags/italy";
 import Europe from "./Icons/flags/europe";
 import Japan from "./Icons/flags/japan";
 import Logo from "./Icons/logo/logo";
+import Image from "next/image";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -39,8 +40,10 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-8 mb-12">
           {/* Brand */}
           <div className="md:col-span-5">
-            <h3 className="font-sans text-2xl font-semibold text-zinc-900 mb-4 flex items-center">
-              <Logo className="size-10 md:size-14" />
+            <h3 className="font-sans text-2xl font-semibold text-zinc-900 mb-4 flex items-center -ml-4">
+              <div className="size-10 md:size-14 relative">
+                <Image src="/logo.png" alt="Xocket Logo" fill />
+              </div>
               <h1 className="font-bricolage-grotesque font-medium text-xl md:text-2xl">
                 Xocket
               </h1>

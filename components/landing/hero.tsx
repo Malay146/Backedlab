@@ -8,9 +8,9 @@ import PixelBlast from "../ui/PixelBlast";
 
 const Hero = () => {
   return (
-    <div className="max-w-350 mx-auto px-4 sm:px-6 lg:px-24 py-10 md:py-32 flex items-center justify-center  mt-12 md:mt-16 bg-white relative z-10 rounded-t-2xl
+    <div className="max-w-350 mx-auto px-4 sm:px-6 lg:px-24 py-10 md:py-32 flex items-center justify-center  mt-12 md:mt-16 relative z-10 rounded-t-2xl
     rounded-b-4xl 
-   md:mask-x-from-90% md:mask-y-from-80%">
+ ">
       {/* Left content */}
       <div className="flex flex-col items-center justify-center gap-4 md:gap-7">
         <div className="font-sans text-3xl sm:text-4xl md:text-5xl lg:text-7xl leading-tight tracking-tight flex flex-col items-center justify-center">
@@ -32,7 +32,7 @@ const Hero = () => {
         </p>
 
         <div className="flex flex-row items-stretch sm:items-center gap-4">
-          <div className="group flex gap-3 justify-center items-center font-inter font-medium bg-blue-600 px-4 py-2 rounded-md cursor-pointer text-sm md:text-base relative z-10">
+          <div className="group flex gap-3 justify-center items-center font-inter font-medium bg-zinc-900 px-4 py-2 rounded-md cursor-pointer text-sm md:text-base relative z-10">
             <button className="inline-block cursor-pointer">
               <span className="text-white chroma-text-out chroma-text-out-animate">
                 Start a Project
@@ -43,9 +43,9 @@ const Hero = () => {
 
           <Link
             href="/works"
-            className="font-inter border border-zinc-700 px-4 py-2 text-black group rounded-md cursor-pointer text-sm md:text-base font-medium"
+            className="font-inter border border-zinc-700 px-4 py-2 text-black group rounded-md cursor-pointer text-sm md:text-base font-medium bg-white"
           >
-            <button className="cursor-pointer chroma-text-out chroma-text-out-animate text-black">
+            <button className="cursor-pointer chroma-text-out chroma-text-out-animate text-black ">
               See Our Work
             </button>
           </Link>

@@ -2,11 +2,9 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import TextAnimation from "./landing/text-animation";
-import { cn } from "@/utils/cn";
 import { motion, AnimatePresence } from "motion/react";
 import { Menu, X } from "lucide-react";
-import Logo from "./Icons/logo/logo";
+import Image from "next/image";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -31,7 +29,9 @@ const Navbar = () => {
           className="w-full max-w-6xl pl-4 pr-3 py-2 bg-white/30 border border-[#E5E5E5] rounded-lg flex items-center justify-between backdrop-blur-sm"
         >
           <Link href="/" className="cursor-pointer flex items-center">
-            <Logo className="size-10 md:size-14" />
+            <div className="size-10 md:size-14 relative">
+              <Image src="/logo.png" alt="Xocket Logo" fill />
+            </div>
             <h1 className="font-bricolage-grotesque font-medium text-xl md:text-2xl">Xocket</h1>
           </Link>
 
@@ -46,7 +46,7 @@ const Navbar = () => {
                 {link.name}
               </a>
             ))}
-            <button className="group font-inter font-medium px-4 py-2 bg-blue-600 rounded-md transition cursor-pointer">
+            <button className="group font-inter font-medium px-4 py-2 bg-zinc-900 rounded-md transition cursor-pointer">
               <span className="chroma-text-out chroma-text-out-animate text-white">
                 Book a Call
               </span>

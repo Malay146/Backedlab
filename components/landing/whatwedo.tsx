@@ -83,8 +83,8 @@ const WhatWeDo = () => {
             }
           >
             <div className="space-y-5">
-              <p className="font-mono text-sm text-blue-900">{card.number}</p>
-              <h3 className="font-inter text-2xl font-semibold bg-linear-to-t from bg-blue-900 bg-clip-text text-transparent">{card.title}</h3>
+              <p className="font-mono text-sm text-zinc-900">{card.number}</p>
+              <h3 className="font-inter text-2xl font-semibold bg-linear-to-t from bg-zinc-900 bg-clip-text text-transparent">{card.title}</h3>
               <p className="font-sans text-zinc-600 leading-relaxed">
                 {card.description}
               </p>

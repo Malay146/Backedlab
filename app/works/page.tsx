@@ -42,8 +42,12 @@ const WorksPage = () => {
           className="w-full max-w-6xl pl-2 md:pl-4 pr-2 md:pr-3 py-2 bg-white/30 border border-[#E5E5E5] rounded-lg flex items-center justify-between backdrop-blur-sm"
         >
           <Link href="/" className="cursor-pointer flex items-center">
-            <Logo className="size-10 md:size-14" />
-            <h1 className="font-bricolage-grotesque font-medium text-xl md:text-2xl">Xocket</h1>
+            <div className="size-10 md:size-14 relative">
+              <Image src="/logo.png" alt="Xocket Logo" fill />
+            </div>
+            <h1 className="font-bricolage-grotesque font-medium text-xl md:text-2xl">
+              Xocket
+            </h1>
           </Link>
 
           {/* Desktop Navigation */}
@@ -57,8 +61,10 @@ const WorksPage = () => {
                 {link.name}
               </a>
             ))}
-            <button className="font-inter px-4 py-2 bg-blue-600 text-white rounded-md transition cursor-pointer group font-medium">
-              <span className="chroma-text-out chroma-text-out-animate">Book a Call</span>
+            <button className="font-inter px-4 py-2 bg-zinc-900 text-white rounded-md transition cursor-pointer group font-medium">
+              <span className="chroma-text-out chroma-text-out-animate">
+                Book a Call
+              </span>
             </button>
           </div>
 

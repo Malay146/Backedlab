@@ -62,7 +62,7 @@ const Stats = () => {
               i !== 3 ? "border-r border-zinc-300" : ""
             }`}
           >
-            <AnimatedNumber value={stat.value} className="text-blue-800" />
+            <AnimatedNumber value={stat.value} className="text-zinc-900" />
             <p className="font-inter text-lg font-medium">{stat.title}</p>
             <p className="font-sans text-sm text-zinc-500">{stat.meta}</p>
           </motion.div>
