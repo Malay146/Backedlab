@@ -8,27 +8,34 @@ import PixelBlast from "../ui/PixelBlast";
 
 const Hero = () => {
   return (
-    <div className="max-w-350 mx-auto px-4 sm:px-6 lg:px-24 py-10 md:py-32 flex items-center justify-center  mt-12 md:mt-16 relative z-10 rounded-t-2xl
+    <div
+      className="max-w-350 mx-auto px-4 sm:px-6 lg:px-24 py-10 md:py-36 flex items-center justify-center  mt-12 md:mt-16 relative z-10 rounded-t-2xl
     rounded-b-4xl 
- ">
+ "
+    >
       {/* Left content */}
-      <div className="flex flex-col items-center justify-center gap-4 md:gap-7">
+      <div className="flex flex-col items-center justify-center gap-4">
         <div className="font-sans text-3xl sm:text-4xl md:text-5xl lg:text-7xl leading-tight tracking-tight flex flex-col items-center justify-center">
           <p className="font-mono text-[10px] text-zinc-700 font-semibold tracking-normal leading-none px-2 py-1.5 bg-zinc-100 inline-block rounded-md shadow-[inset_1px_1px_2px_rgba(0,0,0,0.1),inset_-1px_-1px_2px_rgba(0,0,0,0.3)] mb-4">
             <span className="inline-block size-2 rounded-full bg-blue-700 mr-1 animate-pulse" />
             BUILDING FOR THE INTERNET, WORLDWIDE
           </p>
           <div className="flex flex-col items-center justify-center gap-1">
-            <h1 className="font-inter leading-none tracking-tighter max-w-4xl text-center">
-              Crafting Intelligent, Scalable, and User-Focused Solutions.
+            <h1 className="font-inter leading-none tracking-tighter max-w-5xl text-center text-balance">
+              Digital Craft for Modern Brands.
             </h1>
           </div>
         </div>
 
-        <p className="max-w-4xl text-zinc-700 text-base md:text-lg leading-relaxed text-center">
-          We specialize in creating modern digital experiences through
-          thoughtful design, robust engineering, and innovative technology. From
-          concept to deployment, we help brands grow online.
+        <p className="max-w-4xl text-zinc-700 text-base md:text-lg leading-tight text-center mb-4">
+          <span className="md:hidden">
+            A creative studio blending design and frontend excellence.
+          </span>
+          <span className="hidden md:inline">
+            A creative studio blending design precision with frontend
+            excellence. We create refined digital experiences using modern
+            frameworks, motion systems, and performance-first architecture.
+          </span>
         </p>
 
         <div className="flex flex-row items-stretch sm:items-center gap-4">
