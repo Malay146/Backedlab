@@ -28,7 +28,7 @@ const Beam = () => {
         className="relative h-60 sm:h-55 w-full max-w-xs sm:max-w-xl md:max-w-2xl mx-auto mask-b-from-50% overflow-hidden px-2 sm:px-0"
       >
         {/* LEFT — Tech stack */}
-        <div className="absolute left-2 sm:left-8 top-1/2 -translate-y-1/2 flex flex-col gap-3 sm:gap-4">
+        <div className="absolute left-2 sm:left-8 top-1/2 -translate-y-1/2 flex flex-col gap-3 sm:gap-4 z-10">
           <div ref={figmaRef} className={nodeClass}>
             <Figma className="size-5" />
           </div>
@@ -51,7 +51,7 @@ const Beam = () => {
         </div>
 
         {/* RIGHT — Outcomes */}
-        <div className="absolute right-2 sm:right-8 top-1/2 -translate-y-1/2 flex flex-col gap-3 sm:gap-4">
+        <div className="absolute right-2 sm:right-8 top-1/2 -translate-y-1/2 flex flex-col gap-3 sm:gap-4 z-10">
           <div ref={launchRef} className={nodeClass}>
               <Rocket className="size-5 text-zinc-700" />
           </div>
