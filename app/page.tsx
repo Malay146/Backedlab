@@ -13,6 +13,7 @@ import Techstack from "@/components/landing/techstack";
 import Testimonial from "@/components/landing/testimonial";
 import { useOnScreen } from "@/hooks/useOnScreen";
 import dynamic from "next/dynamic";
+import Footer2 from "@/components/footer-2";
 
 const PixelBlast = dynamic(
   () => import("@/components/ui/PixelBlast"),
@@ -36,12 +37,12 @@ export default function Home() {
         <PixelBlast
           variant="square"
           pixelSize={3}
-          colors={['#FF0000', '#FF7F00', '#FFFF00', '#00FF00', '#0000FF', '#4B0082', '#9400D3']}
-          patternScale={3}
-          patternDensity={0.7}
+          colors={['#FF0000', '#993300', '#996600', '#00FF00', '#0000FF', '#4B0082', '#9400D3']}
+          patternScale={2.5}
+          patternDensity={1}
           rippleSpeed={0.3}
-          rippleThickness={0.05}
-          rippleIntensityScale={1}
+          rippleThickness={0.01}
+          rippleIntensityScale={0.5}
           speed={0.8}
           transparent={true}
           edgeFade={0.2}
@@ -71,6 +72,8 @@ export default function Home() {
       </div>
 
       <Footer />
+
+      <Footer2 />
     </div>
   );
 }

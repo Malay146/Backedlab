@@ -163,8 +163,6 @@ body {
   }
 }
 
-
-
 .chroma-card-title {
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
@@ -178,6 +176,7 @@ body {
   letter-spacing: inherit;
   background-blend-mode: normal;
   will-change: background-position;
+  animation-fill-mode: both;
   background-image:
     linear-gradient(
       90deg,
@@ -203,9 +202,9 @@ body {
     300% 100%,
     300% 100%;
   background-position:
-  0% 0,
-  0% 0;
-  animation: chroma-continuous-loop 4s linear infinite;
+    0% 0,
+    0% 0;
+  animation: chroma-continuous-loop 3.5s linear infinite;
 }
 @keyframes chroma-continuous-loop {
   0% {
@@ -213,6 +212,7 @@ body {
       0% 0,
       0% 0;
   }
+
   100% {
     background-position:
       -300% 0,
@@ -220,6 +220,22 @@ body {
   }
 }
 
+/* Sequential animation delays for flowing chroma effect */
+.chroma-delay-0 {
+  animation-delay: 0s;
+}
+
+.chroma-delay-1 {
+  animation-delay: calc(-4s / 3);
+}
+
+.chroma-delay-2 {
+  animation-delay: calc(-8s / 3);
+}
+
+.chroma-delay-3 {
+  animation-delay: calc(-12s / 3);
+}
 
 :root {
   --radius: 0.625rem;

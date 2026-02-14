@@ -4,6 +4,7 @@ const Timelines = () => {
   const timelines = [
     {
       category: "/01 DIGITAL PRODUCT",
+      animationDelay: "chroma-delay-0",
       details: [
         { task: "MVP web app", duration: "4–10 weeks" },
         { task: "MVP mobile app", duration: "2–8 weeks" },
@@ -15,6 +16,7 @@ const Timelines = () => {
     },
     {
       category: "/02 BRAND",
+      animationDelay: "chroma-delay-1",
       details: [
         { task: "Logo design", duration: "3–5 days" },
         { task: "Full brand identity", duration: "5–10 days" },
@@ -26,6 +28,7 @@ const Timelines = () => {
     },
     {
       category: "/03 WEBSITE",
+      animationDelay: "chroma-delay-2",
       details: [
         { task: "Design only", duration: "min. 3 days" },
         { task: "Build in Framer", duration: "min. 10 days" },
@@ -37,6 +40,7 @@ const Timelines = () => {
     },
     {
       category: "/04 MVPS",
+      animationDelay: "chroma-delay-3",
       details: [
         { task: "Idea validation", duration: "3–5 days" },
         { task: "UX flows", duration: "5–7 days" },
@@ -65,7 +69,7 @@ const Timelines = () => {
                 className="py-6 px-4 border-r border-zinc-200 last:border-r-0"
               >
                 <h3 className="text-sm font-mono font-semibold text-zinc-900 mb-6">
-                  <span className="chroma-card-title">{col.category}</span>
+                  <span className={`chroma-card-title ${col.animationDelay}`}>{col.category}</span>
                 </h3>
 
                 <ul className="space-y-3">

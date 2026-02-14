@@ -61,13 +61,12 @@ const Stats = () => {
               i !== 3 ? "border-r border-zinc-300" : ""
             }`}
           >
-            {/* <AnimatedNumber value={stat.value} className="text-zinc-900" /> */}
-            <p className="font-mono text-4xl tracking-tight text-zinc-900">
+            <AnimatedNumber value={stat.value} className="text-zinc-900" />
+            {/* <p className="font-mono text-4xl tracking-tight text-zinc-900">
               <span className="chroma-card-title">{stat.value}</span>
-            </p>
+            </p> */}
             <p className="font-inter text-lg font-medium">
-              {/* <span className="chroma-card-title">{stat.title}</span> */}
-              <p>{stat.title}</p>
+              <span>{stat.title}</span>
             </p>
             <p className="font-sans text-sm text-zinc-500">{stat.meta}</p>
           </motion.div>

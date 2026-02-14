@@ -14,7 +14,7 @@ const Hero = () => {
  "
     >
       {/* Left content */}
-      <div className="flex flex-col items-center justify-center gap-4">
+      <div className="flex flex-col items-center justify-center gap-8">
         <div className="font-sans text-3xl sm:text-4xl md:text-5xl lg:text-7xl leading-tight tracking-tight flex flex-col items-center justify-center">
           <p className="font-mono text-[10px] text-zinc-700 font-semibold tracking-normal leading-none px-2 py-1.5 bg-zinc-100 inline-block rounded-md shadow-[inset_1px_1px_2px_rgba(0,0,0,0.1),inset_-1px_-1px_2px_rgba(0,0,0,0.3)] mb-4">
             <span className="inline-block size-2 rounded-full bg-blue-700 mr-1 animate-pulse" />
@@ -27,7 +27,7 @@ const Hero = () => {
           </div>
         </div>
 
-        <p className="max-w-4xl text-zinc-700 text-base md:text-lg leading-tight text-center mb-4">
+        <p className="max-w-4xl text-zinc-700 text-base md:text-lg leading-tight text-center mb-6">
           <span className="md:hidden">
             A creative studio blending design and frontend excellence.
           </span>

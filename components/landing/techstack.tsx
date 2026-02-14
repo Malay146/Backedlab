@@ -83,7 +83,7 @@ const Techstack = () => {
                 }`}
               >
                 <h3 className="text-sm font-mono font-semibold text-zinc-900 mb-6">
-                  <span className="chroma-card-title">{column.title}</span>
+                  {column.title}
                 </h3>
 
                 <ul className="space-y-4 text-sm text-zinc-700">

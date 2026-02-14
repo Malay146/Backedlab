@@ -10,6 +10,7 @@ const WhatWeDo = () => {
       items: ["Interface design", "Design systems", "UX structure"],
       footer: "UI · UX · Systems",
       className: "",
+      animationDelay: "chroma-delay-0",
     },
     {
       number: "02",
@@ -23,6 +24,7 @@ const WhatWeDo = () => {
       ],
       footer: "React · Next.js · Web",
       className: "border-x border-zinc-300",
+      animationDelay: "chroma-delay-1",
     },
     {
       number: "03",
@@ -36,6 +38,7 @@ const WhatWeDo = () => {
       ],
       footer: "Motion · GSAP · Framer",
       className: "",
+      animationDelay: "chroma-delay-2",
     },
     {
       number: "04",
@@ -45,6 +48,7 @@ const WhatWeDo = () => {
       items: ["Visual language", "Typography systems", "Design guidelines"],
       footer: "Identity · Guidelines",
       className: "border-t border-zinc-300",
+      animationDelay: "chroma-delay-0",
     },
     {
       number: "05",
@@ -54,6 +58,7 @@ const WhatWeDo = () => {
       items: ["Feature prioritization", "UX strategy", "MVP planning"],
       footer: "Strategy · UX",
       className: "border border-zinc-300 border-b-0",
+      animationDelay: "chroma-delay-1",
     },
     {
       number: "06",
@@ -63,6 +68,7 @@ const WhatWeDo = () => {
       items: ["UI consistency", "Interaction review", "Cross-device testing"],
       footer: "QA · Refinement",
       className: "border-t border-zinc-300",
+      animationDelay: "chroma-delay-2",
     },
   ];
   return (
@@ -85,7 +91,7 @@ const WhatWeDo = () => {
             <div className="space-y-5">
               <p className="font-mono text-sm text-zinc-900">{card.number}</p>
               <h3 className="font-inter text-2xl font-semibold">
-                <span className="chroma-card-title">{card.title}</span>
+                <span className={`chroma-card-title ${card.animationDelay}`}>{card.title}</span>
               </h3>
               <p className="font-sans text-zinc-600 leading-relaxed">
                 {card.description}
