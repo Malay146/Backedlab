@@ -8,6 +8,7 @@ import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/utils/cn";
 import Logo from "@/components/Icons/logo/logo";
+import Footer2 from "@/components/footer-2";
 
 const works = [
   {
@@ -156,6 +157,8 @@ const WorksPage = () => {
         </div>
       </main>
       <Footer />
+
+      <Footer2 />
     </div>
   );
 };
