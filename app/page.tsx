@@ -14,6 +14,7 @@ import Testimonial from "@/components/landing/testimonial";
 import { useOnScreen } from "@/hooks/useOnScreen";
 import dynamic from "next/dynamic";
 import Footer2 from "@/components/footer-2";
+import BentoN from "@/components/landing/bento-n";
 
 const PixelBlast = dynamic(
   () => import("@/components/ui/PixelBlast"),
@@ -63,7 +64,8 @@ export default function Home() {
 
       <Stats />
       <Timelines />
-      <Bento />
+      {/* <Bento /> */}
+      <BentoN />
       <Techstack />
       <Testimonial />
 
