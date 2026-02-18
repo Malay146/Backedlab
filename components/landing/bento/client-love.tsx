@@ -51,7 +51,6 @@ const ClientLove = () => {
         <div
           key={index}
           className={`transition-all duration-300 ease-in-out transform cursor-pointer ${getScaleClass(index)}`}
-          onClick={() => setCenterIndex(index)}
         >
           <Testimonial
             name={testimonial.name}
@@ -88,7 +87,7 @@ const Testimonial = ({
         <h1 className="font-bold font-bricolage-grotesque tracking-tight">
           {name}
         </h1>
-        <p className="text-zinc-600 text-sm leading-none">{feedback}</p>
+        <p className="text-zinc-600 text-sm track leading-none">{feedback}</p>
       </div>
       <Star className="size-8 text-yellow-400" />
     </div>

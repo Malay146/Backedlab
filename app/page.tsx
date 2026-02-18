@@ -14,7 +14,7 @@ import Testimonial from "@/components/landing/testimonial";
 import { useOnScreen } from "@/hooks/useOnScreen";
 import dynamic from "next/dynamic";
 import Footer2 from "@/components/footer-2";
-import BentoN from "@/components/landing/bento-n";
+import BentoN from "@/components/landing/bento";
 
 const PixelBlast = dynamic(
   () => import("@/components/ui/PixelBlast"),
