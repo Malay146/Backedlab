@@ -14,7 +14,7 @@ const BentoN = () => {
         },
         {
             title: "Our Process",
-            description: "Simple, transparent, and built for speed from idea to launch — our platform helps you turn concepts into real products without the usual friction. ",
+            description: "Simple, transparent, and built for speed — our platform turns your ideas into real products without the usual friction.",
             image: "/noise.png",
             component: <OurProcess />
         },
@@ -37,10 +37,10 @@ const BentoN = () => {
             {bentoData.map((item, index) => (
                 <div key={index} className={`bg-white rounded-lg flex flex-col justify-between p-4`}>
                     <div className="flex flex-col gap-1">
-                        <h1 className="text-3xl tracking-tight font-bold font-bricolage-grotesque">{item.title}</h1>
-                        <p className="leading-tight text-zinc-700 text-lg">{item.description}</p>
+                        <h1 className="text-3xl tracking-tight font-semibold font-bricolage-grotesque">{item.title}</h1>
+                        <p className="leading-none text-zinc-700 text-md">{item.description}</p>
                     </div>
-                    <div className="relative w-full h-80 overflow-hidden mt-4 rounded-lg flex items-center justify-center">
+                    <div className="relative w-full h-80 overflow-hidden mt-6 rounded-lg flex items-center justify-center">
                         <Image src={item.image} alt={item.title} fill className="w-full absolute object-cover" />
                         <div className="relative">
                             {item.component}
