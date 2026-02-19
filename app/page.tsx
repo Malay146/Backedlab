@@ -64,7 +64,7 @@ export default function Home() {
 
       <Stats />
       <Timelines />
-      <Bento />
+      {/* <Bento /> */}
       <Bento2 />
       <Techstack />
       <Testimonial />
