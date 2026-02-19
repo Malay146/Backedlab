@@ -3,7 +3,7 @@ import RapidDevelopment from "./bento/rapid-development";
 import ClientLove from "./bento/client-love";
 import Grainient from "../Grainient";
 
-const BentoN = () => {
+const Bento = () => {
     const bentoData = [
         {
             title: "Rapid Development",
@@ -27,7 +27,7 @@ const BentoN = () => {
         <div className="max-w-6xl mx-auto py-20">
           {/* Section header */}
           <h2 className="font-inter font-medium text-5xl tracking-tight mb-12">
-            Our techstack
+            From Idea to Impact
           </h2>
           <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-3">
             {bentoData.map((item, index) => (
@@ -56,4 +56,4 @@ const BentoN = () => {
   );
 };
 
-export default BentoN;
+export default Bento;
