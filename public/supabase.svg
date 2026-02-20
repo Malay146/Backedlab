@@ -2,12 +2,12 @@
 	<title>supabase-logo-wordmark--light-svg</title>
 	<defs>
 		<linearGradient id="g1" x2="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(539.819,226.399,-338.743,807.688,724.964,734.759)">
-			<stop offset="0" stop-color="#249361"/>
-			<stop offset="1" stop-color="#3ecf8e"/>
+			<stop offset="0" stopColor="#249361"/>
+			<stop offset="1" stopColor="#3ecf8e"/>
 		</linearGradient>
 		<linearGradient id="g2" x2="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(245.712,462.539,-527.578,280.262,485.873,407.926)">
-			<stop offset="0" stop-color="#000000" stop-opacity="1"/>
-			<stop offset="1" stop-color="#000000" stop-opacity="0"/>
+			<stop offset="0" stopColor="#000000" stop-opacity="1"/>
+			<stop offset="1" stopColor="#000000" stop-opacity="0"/>
 		</linearGradient>
 	</defs>
 	<style>

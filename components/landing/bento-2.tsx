@@ -1,22 +1,25 @@
 import React from "react";
 import Image from "next/image";
+import AIDriven from "./bento/ai-driven";
+import Security from "./bento/security";
+import Analytics from "./bento/analytics";
 
 const Bento2 = () => {
     const bentoData = [
         {
             title: "AI-Driven Advantage",
             description: "Next-gen AI and smart automation for faster, sharper outcomes.",
-            image: "/1.png"
+            component: <AIDriven />
         },
         {
             title: "Enterprise-Grade Security",
             description: "SOC2, Role-Based Access, and encrypted data pipelines.",
-            image: "/2.png"
+            component: <Security />
         },
         {
             title: "Analytics for everything",
             description: "Check analytics, track your posts, and get insights into your audience.",
-            image: "/3.png"
+            component: <Analytics />
         }
     ];
   return (
@@ -32,8 +35,8 @@ const Bento2 = () => {
 
             {bentoData.map((item, index) => (
                 <div key={index} className="w-full border border-zinc-300 bg-zinc-50 flex flex-col overflow-hidden">
-                    <div className="w-full relative flex items-center justify-center mask-l-from-80% mask-r-from-80%">
-                        <Image src={item.image} alt={item.title} width={800} height={100} className="object-cover w-full h-full" />
+                    <div className="w-full relative flex items-center justify-center mask-l-from-70% mask-r-from-70%">
+                        {item.component}
                     </div>
                     <div className="w-full h-full flex flex-col justify-end p-4 font-inter">
                         <h1 className="text-xl sm:text-2xl font-semibold tracking-tight mb-2">{item.title}</h1>
